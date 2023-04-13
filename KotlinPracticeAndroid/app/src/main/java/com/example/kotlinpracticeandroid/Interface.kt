@@ -39,6 +39,9 @@ fun main() {
     println(price.price)
     xyz = 50 // ClassInstance file ma 37
     println(internalProperty)
+
+//    var demo = Demo.Res() // sealed class use in same package
+//    demo.printRes()
 }
 
 // interface inheritance

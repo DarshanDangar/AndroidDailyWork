@@ -35,4 +35,7 @@ fun main() {
     val(name, address) = hospital
     println(name)
     println(address)
+
+
+
 }
