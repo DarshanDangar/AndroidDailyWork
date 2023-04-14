@@ -18,6 +18,11 @@ interface Apple {
     fun price()
 }
 
+@JvmInline
+value class ConvertSquare(val num: Int) {
+
+}
+
 fun main() {
     var studentName = NameOfStudent("Darshan")
     println(studentName)

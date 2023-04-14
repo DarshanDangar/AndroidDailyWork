@@ -58,15 +58,12 @@ class GetSet {
         }
     }
 
-
-
 }
 
 class PrivateSet {
     var hd: Int = 0
     private set
 }
-
 
 fun main() {
     val address = Address()

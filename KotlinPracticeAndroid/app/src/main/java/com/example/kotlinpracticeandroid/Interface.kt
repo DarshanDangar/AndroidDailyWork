@@ -29,16 +29,20 @@ class Car(override var condition: Int, override var maaterial: String) : Engine 
 
 fun main() {
 
-    var car = Car(85,"StainlessSteel")
-    car.isComplete()
-    car.price()
+//    var car = Car(85,"StainlessSteel")
+//    car.isComplete()
+//    car.price()
+//
+//    var price = AboutPrice()
+//    println(price.useMaterial)
+//    println(price.buildingType)
+//    println(price.price)
+//    xyz = 50 // ClassInstance file ma 37
+//    println(internalProperty)
 
-    var price = AboutPrice()
-    println(price.useMaterial)
-    println(price.buildingType)
-    println(price.price)
-    xyz = 50 // ClassInstance file ma 37
-    println(internalProperty)
+    var unNamedff = UnNa(5)
+    println(unNamedff)
+
 
 //    var demo = Demo.Res() // sealed class use in same package
 //    demo.printRes()
@@ -73,7 +77,15 @@ class AboutPrice: House {
 
 }
 
-// Resolving overiding conflict
+//
+
+interface Unnamed {
+    var un: Int
+}
+
+class UnNa(override var un: Int = 5): Unnamed {
+}
+
 
 
 

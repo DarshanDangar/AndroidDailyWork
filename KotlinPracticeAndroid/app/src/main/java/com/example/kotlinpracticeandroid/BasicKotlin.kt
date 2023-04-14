@@ -28,7 +28,7 @@ val lastName = "Dangar"
 val fullName = "$firstName $lastName"
 
 
-// if else
+// if else expression
 
 val age = 19
 val result = if (age > 18) {
