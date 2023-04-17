@@ -84,7 +84,7 @@ fun main() {
 
     fun factoryType(name: Factory) {
         when(name){
-            is FoodFactory -> println("this is food factory")
+            is FoodFactory -> println("this is food factory ${foodFactory.namee}" )
             is CotonFactory -> println("this is coton factory")
             is Gidc -> println("This is gidc")
         }

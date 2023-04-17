@@ -40,7 +40,7 @@ fun main() {
 //    xyz = 50 // ClassInstance file ma 37
 //    println(internalProperty)
 
-    var unNamedff = UnNa(5)
+    val unNamedff = UnNa(5)
     println(unNamedff)
 
 
@@ -84,6 +84,7 @@ interface Unnamed {
 }
 
 class UnNa(override var un: Int = 5): Unnamed {
+
 }
 
 
