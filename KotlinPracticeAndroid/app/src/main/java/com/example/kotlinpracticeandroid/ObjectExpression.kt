@@ -28,6 +28,8 @@ class AnonymousObject {
     fun getObject() = object {
         val obj: String = "Object"
     }
+
+    companion object {}
 }
 
 

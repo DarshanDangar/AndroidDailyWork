@@ -1,6 +1,5 @@
 package com.example.kotlinpracticeandroid
-
-class TransportVehicle {
+ class TransportVehicle {
     val numberMem = 50
     inner class Bus {
         fun busAvailable() {
@@ -19,7 +18,7 @@ class TransportVehicle {
 
     }
 
-    data class Gsrtc(val name: String, val root: String)
+   data class Gsrtc(val name: String, val root: String)
 
     interface Maintainance {
         fun isNeed()
@@ -40,6 +39,19 @@ class TransportVehicle {
         override fun isNeed() {
             println("Yes midibus must need meantainance")
         }
+    }
+
+    enum class Day {
+        Monday
+    }
+
+    abstract class Tyoe {
+
+    }
+
+    @JvmInline
+    value class HJUv(val name: String) {
+
     }
 
 }

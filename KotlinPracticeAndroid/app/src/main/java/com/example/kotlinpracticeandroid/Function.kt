@@ -90,45 +90,67 @@ fun <T>generic(value: T): T {
     return  value
 }
 
+// tail recursion
+
+tailrec fun facttail(num: Int, product: Int): Int {
+    return if (num == 1)
+        product
+    else
+        facttail(num - 1, product * num)
+}
+
+//tailrec fun sumArray(num: Array<Int>, sum: Int = 0): Int{
+//        for (i in num) {
+//            if (i >= 0) {
+//                sumArray(num,num[i] + sum)
+//            }
+//            return sum
+//    }
+//    return sum
+//}
 
 fun main() {
-
-    CyberCrime().crimeRate(15.5)
-    mrp()
-    val amts = Amts()
-    var typeChecking = amts.isOpen()
-    if (typeChecking is Unit) {
-        println(typeChecking)
-    }
-    greeting("Darshan")
-    println(voter)
-    isOpen( available = true, name = "Shyam")
-    val cube = cube(3)
-    println(cube)
-    println(square(4))
-    isBusy()
-    println(area(5))
-    val area = area(6)
-    if (area is Double) {
-        println("Area is double type")
-    }
-
-    var d: Array<Int> = arrayOf(9,8,7)
-    var resultVararg = varargs(5,4,6,8,2,4)
-    for (i in resultVararg) {
-        println(i)
-    }
-
-    val myName: String by lazy {
-        "Darshan"
-    }
-    println(myName)
-
-    var generic: Any = generic(5)
-    println(generic)
-    generic = generic("Darshan")
-    println(generic)
-    //generic = generic(50)
-    print(generic)
+    val arrayOfInt = arrayOf(5,4,6,3,2,1)
+//    val sumArray = sumArray(arrayOfInt)
+//    println(sumArray)
+    val resfact = facttail(5,1)
+    println(resfact)
+//    CyberCrime().crimeRate(15.5)
+//    mrp()
+//    val amts = Amts()
+//    var typeChecking = amts.isOpen()
+//    if (typeChecking is Unit) {
+//        println(typeChecking)
+//    }
+//    greeting("Darshan")
+//    println(voter)
+//    isOpen( available = true, name = "Shyam")
+//    val cube = cube(3)
+//    println(cube)
+//    println(square(4))
+//    isBusy()
+//    println(area(5))
+//    val area = area(6)
+//    if (area is Double) {
+//        println("Area is double type")
+//    }
+//
+//    var d: Array<Int> = arrayOf(9,8,7)
+//    var resultVararg = varargs(5,4,6,8,2,4)
+//    for (i in resultVararg) {
+//        println(i)
+//    }
+//
+//    val myName: String by lazy {
+//        "Darshan"
+//    }
+//    println(myName)
+//
+//    var generic: Any = generic(5)
+//    println(generic)
+//    generic = generic("Darshan")
+//    println(generic)
+//    //generic = generic(50)
+//    print(generic)
 
 }

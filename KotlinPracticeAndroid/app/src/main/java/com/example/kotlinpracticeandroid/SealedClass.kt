@@ -58,6 +58,12 @@ class Xyz: BodyPart() {
     }
 }
 
+class Head: BodyPart() {
+    override fun isReal() {
+        TODO("Not yet implemented")
+    }
+}
+
 fun main() {
 
     val xyz = Xyz()

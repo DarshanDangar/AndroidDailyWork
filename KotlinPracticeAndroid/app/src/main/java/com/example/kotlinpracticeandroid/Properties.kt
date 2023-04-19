@@ -6,16 +6,22 @@ import java.util.*
 
 var emptyProperty: String = ""
 val intNumber = 5;
-
 class Address {
 
     var address: String = "MD"
     var city: String = "Rjkt"
     var street: String = "KR"
     var zipcode: String = "360331"
+
+    fun hell() {
+        val x  =  fun (greeting: () -> Unit ) {
+            greeting()
+        }
+    }
 }
 
 fun deatls(address: Address): Address{
+
     val result = Address()
     result.address = address.address
     result.city = address.city

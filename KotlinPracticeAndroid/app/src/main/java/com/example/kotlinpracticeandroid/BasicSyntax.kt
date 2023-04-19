@@ -68,6 +68,7 @@ class Person(name: String, age: Int) {
 }
 
 class Student(val studentId: Int = 0, val studentDepartment: String) {
+
     fun deatil() {
         println("Student id is: $studentId and student Department is: $studentDepartment")
     }
