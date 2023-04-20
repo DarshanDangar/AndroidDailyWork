@@ -1,6 +1,6 @@
 package com.example.kotlinpracticeandroid
 
-import kotlin.properties.Delegates
+
 
 class Health(val name: String, var isWell: Boolean) {
     //var isHealthy = isHealth
@@ -102,16 +102,14 @@ fun main() {
     val extOne = ExtOne.ExtTwo()
 
     println("Darshan".chara())
-    val useCompobj = UseCompanionObj.Name.add()
+    val useCompobj = UseCompanionObj.add()
 
     val ans = 89658656.toString()
     println(ans)
-    val d = 5 as? String
-    println(d)
     val derived = Derivedclass().isReady()
     println(derived)
 
-    var health = Health("Darshan", true)
+    val health = Health("Darshan", true)
     health.isWell()
     health.type()
 

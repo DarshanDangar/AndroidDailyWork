@@ -66,7 +66,7 @@ fun add(digit1: Int, digit2: Int) {
     println(digit1 + digit2)
 }
 
-fun sub(num1: Int, num2: Int): Unit {
+fun sub(num1: Int, num2: Int) {
     println(num1 * num2) // unit is this function rreturn no meaningful value
 }
 

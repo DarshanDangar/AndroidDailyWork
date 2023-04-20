@@ -55,7 +55,6 @@ interface Building {
     val buildingType: String
     val useMaterial: String
 
-
 }
 
 interface House: Building {

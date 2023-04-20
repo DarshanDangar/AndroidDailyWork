@@ -6,7 +6,7 @@ fun person(greeting: () -> Unit) {
     greeting()
 }
 
-suspend fun name() {
+fun name() {
     println("Suspend function use")
 }
 
@@ -63,6 +63,12 @@ fun main() {
 
     val sum2  = { a: Int , b: Int -> a + b}
 
+    var stringExp = "gonna do "
+    val addS = fun String.(successor: String) : String {
+        return this + successor
+    }
+    stringExp = stringExp . addS ("nothing much.")
+    println (stringExp)
 
 
 }
