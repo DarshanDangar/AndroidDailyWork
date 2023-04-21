@@ -82,9 +82,9 @@ fun main() {
         "age" to 20
     ))
 
-
-
     println(storedKeyValue.map)
     println(storedKeyValue.name)
     println(storedKeyValue.age)
+
+
 }

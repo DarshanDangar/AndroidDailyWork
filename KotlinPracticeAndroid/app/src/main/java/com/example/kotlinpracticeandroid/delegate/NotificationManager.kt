@@ -8,7 +8,6 @@ class NotificationManagerImpl: NotificationManager {
     override fun sendNotification() {
         println("Notified")
     }
-
 }
 
 class Samsung(private val notificationManager: NotificationManager): NotificationManager by notificationManager

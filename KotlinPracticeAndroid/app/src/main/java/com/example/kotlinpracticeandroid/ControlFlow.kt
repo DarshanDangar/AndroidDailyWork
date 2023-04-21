@@ -10,7 +10,9 @@ var max = 0
 
 
 var othernumber: Int = 8
-var maximum = if (number > digit) number else if (digit > othernumber) digit else othernumber
+var maximum = if (number > digit)
+    number
+else if (digit > othernumber) digit else othernumber
 
 // when expression
 

@@ -10,21 +10,28 @@ class Progress(private val databaseService: DatabaseService) {
             databaseService.setProgress(value)
         }
 
-    operator fun getValue(thisRef: Main, property: KProperty<*>): Int = progress
+    operator fun getValue(thisRef: Any, property: KProperty<*>): Int = progress
 
-    operator fun setValue(thisRef: Main, property: KProperty<*>, value: Any?) {
-        if (value is Int)
-            progress = value
+    operator fun setValue(thisRef: Any, property: KProperty<*>, value: Int) {
+        progress = value
     }
-
 }
 
 class Main {
     var progress by Progress(databaseService)
+
+    fun main() {
+        var progress = Main().progress
+        progress = 5
+        println(progress)
+    }
 }
 
 fun main() {
-    var progress = Main().progress
-    println(progress)
+    Main().main()
 }
+
+
+
+
 

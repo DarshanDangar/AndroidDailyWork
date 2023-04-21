@@ -3,6 +3,12 @@ package com.example.kotlinpracticeandroid
 // class and instance
 
 class Area(var radius: Int) {
+    companion object {
+        val ct: String by lazy {
+
+            ""
+        }
+    }
     var area = radius * radius
     fun printArea(){
         println(area)
