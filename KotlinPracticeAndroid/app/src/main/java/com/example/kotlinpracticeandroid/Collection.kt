@@ -45,10 +45,82 @@ fun main() {
 //        println(it)
 //    }
 
-    val iterator = numberList.listIterator()
-    while (iterator.hasPrevious()) {
-        println(iterator.previous())
+//    val iterator = numberList.listIterator()
+//    while (iterator.hasNext()) iterator.next()
+//    while (iterator.hasPrevious()) {
+//        println(iterator.previous())
+//    }
+//    val first = 0
+//    val last = 10
+//    val step = 1
+//    for (int i = first;i <= last; i += step) {
+//        // ...
+//    }
+//    val mutableiteraror = numberList.iterator()
+//    println(numberList)
+//    mutableiteraror.next()
+//    mutableiteraror.next()
+//    mutableiteraror.remove()
+//    println(mutableiteraror)
+//    println(numberList)
+
+    val evenNumber = generateSequence(1) { it * 2 }
+    println(evenNumber.take(200).toList())
+    println(evenNumber.take(10).toList())
+
+    val lessthan10 = generateSequence(1) { if(it < 10) it + 1 else it}
+    println(lessthan10.take(15).toList())
+    
+    val numberListChunk = sequence { 
+        yield(5)
+        yieldAll(listOf(8,10,12))
+        yieldAll(generateSequence(20) { it + 1 })
+        
     }
+    println(numberListChunk.take(20).toList())
+
+    val strL = "My Name is Darshan Dangar My Native place is Rajkot".split(" ")
+    val sqstr = strL.asSequence()
+    val lsqstr = sqstr.filter { println(it); it.length > 5 }
+        .map { println("${it.length}"); it.length }
+        .take(3)
+    println(lsqstr.toList())
+
+    println(numberSet.filter { it > 5; }
+        .map { println(it); it }
+        .take(3)
+        )
+
+    val numbers = listOf("one", "two", "three", "four")
+    val filterResults = mutableListOf<String>()  //destination object
+    numbers.filterTo(filterResults) { it.length > 3 }
+    numbers.filterIndexedTo(filterResults) { index, _ -> index == 0 }
+    println(filterResults) // contains results of both operations
+
+    // map
+
+    val numMap = listOf(10, 11, 12, 21, 25, 28, 29, 24, 35)
+    println(numMap.map { it })
+    println(numMap.map { it * it })
+    println(numMap.map { it / it })
+    println(numMap.map { it - 10 })
+    println(numMap.map { it.times(3) })
+    println(numMap.map { it.downTo(1) }) //meaning
+    println(numMap.mapIndexed { index, i -> index * 2 })
+
+    //zip
+
+    val animalList = listOf("Lion", "Horse", "Dog")
+    val animalColor = listOf("Orange", "White", "Red")
+    val resAnimal = animalList zip animalColor
+    val resoAnimal = animalList.zip(animalColor)
+    println()
+    println(resAnimal)
+    println(resoAnimal)
+    println(animalList.zip(animalColor) {animalList, animalColor -> "$animalList color is: $animalColor"})
+
+    val table = listOf("Darshan" to 1, "Shyam" to 2, "Shubham" to 3)
+    println(table.unzip())
 
 //    for (ele in collection){
 //        println(ele)
