@@ -121,6 +121,8 @@ fun main() {
 
     val table = listOf("Darshan" to 1, "Shyam" to 2, "Shubham" to 3)
     println(table.unzip())
+    println(table.size)
+
 
 //    for (ele in collection){
 //        println(ele)

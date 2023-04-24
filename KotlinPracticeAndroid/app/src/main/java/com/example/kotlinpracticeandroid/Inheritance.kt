@@ -15,7 +15,7 @@ open class Dog: Animal("Dog", "pet", 5, "White") {
 
 class Horse(name: String, type: String, life: Int, color: String): Animal(name,type,life,color) {
 
-    constructor(color: String): this("Bavli", "Marwadi", 30, color) {
+    constructor(color: String): this("Radhika", "Marwadi", 30, color) {
         this.color = color
         println("Sec called")
     }
