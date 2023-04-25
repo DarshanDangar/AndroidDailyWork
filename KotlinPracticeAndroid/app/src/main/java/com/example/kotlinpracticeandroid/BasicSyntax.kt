@@ -42,11 +42,11 @@ fun main() {
 //    println(str)
 //    println("String is: ${str.length}")
 //    println()
-    var person = Person("Darshan", 21)
+    val person = Person("Darshan", 21)
     person.name()
     println(car.name)
 
-    var deatils = Deatils()
+    val deatils = Deatils()
     deatils.main()
 
 }
@@ -83,44 +83,21 @@ var studentMech = Student("Mechanical")
 
 //var student = Student("Darshan")
 
-class Vehicle {
-    var name: String
-
-    constructor(name: String) {
-        this.name = name
-    }
-
-}
+class Vehicle(var name: String)
 
 var car = Vehicle("Weganor")
 
 // inheritance
 // all class by default final so can't inherit therefore make open
 
-open class Transport {
-
-    var transportRoot: String
-    var transportName: String
-
-    constructor(transportRoot: String, transportName: String) {
-        this.transportName = transportName
-        this.transportRoot = transportRoot
-    }
-
+open class Transport(var transportRoot: String, var transportName: String) {
     open fun price() {
         println("price depends on root, vehicle and iteam")
     }
-
 }
 
-class VehicleTransport: Transport {
-
-    var price: Int
-
-    constructor(price: Int, transportName: String, transportRoot: String) : super(transportRoot,transportName) {
-        this.price = price
-    }
-
+class VehicleTransport(var price: Int, transportName: String, transportRoot: String) :
+    Transport(transportRoot, transportName) {
     override fun price() {
         super.price()
         println("truck price is depend on iteam size and weight")
@@ -128,7 +105,6 @@ class VehicleTransport: Transport {
         println("Transport Name is: $transportName")
         println("Transport Root s: $transportRoot")
     }
-
 }
 
 class Bus(price: Int, transportRoot: String, transportName: String) : Transport(transportRoot, transportName) {
@@ -136,10 +112,8 @@ class Bus(price: Int, transportRoot: String, transportName: String) : Transport(
     var money = price
 
     override fun price() {
-
         println("bus price is fix on particular root")
     }
-
 }
 
 class Deatils {
@@ -149,7 +123,6 @@ class Deatils {
     fun main() {
         truck.price()
     }
-
 }
 
 

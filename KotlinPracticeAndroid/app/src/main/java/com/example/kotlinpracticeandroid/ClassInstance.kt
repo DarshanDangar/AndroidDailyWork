@@ -2,7 +2,7 @@ package com.example.kotlinpracticeandroid
 
 // class and instance
 
-class Area(var radius: Int) {
+class Area(radius: Int) {
     companion object {
         val ct: String by lazy {
 
@@ -28,7 +28,7 @@ class Area(var radius: Int) {
 }
 
 fun main() {
-    var area = Area(5)
+    val area = Area(5)
     area.printArea()
     println(area.max(10,12))
     for (i in area.iteam) {
@@ -42,6 +42,6 @@ fun main() {
 
 }
 
-public var xyz = 5
+var xyz = 5
 private var privateProperty = 500
 internal var internalProperty = 5000 // use only same module(package) (app)

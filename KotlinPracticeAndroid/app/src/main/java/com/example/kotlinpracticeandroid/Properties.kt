@@ -1,7 +1,5 @@
 package com.example.kotlinpracticeandroid
 
-import java.util.*
-
 // Properties
 
 var emptyProperty: String = ""
@@ -13,8 +11,8 @@ class Address {
     var street: String = "KR"
     var zipcode: String = "360331"
 
-    fun hell() {
-        val x  =  fun (greeting: () -> Unit ) {
+    fun hello() {
+        val greetingPerson  =  fun (greeting: () -> Unit ) {
             greeting()
         }
     }
@@ -56,9 +54,7 @@ class Square(var side: Int) {
 class GetSet {
 
     var radius: Int = 0
-
-    get() = field
-    set(value) {
+        set(value) {
         if (value > 10) {
             field = 10
         }
@@ -68,45 +64,31 @@ class GetSet {
 
 class PrivateSet {
     var hd: Int = 0
-    private set
+    set(value) {
+        field = value
+    }
 }
 
 fun main() {
     val address = Address()
-    val det = deatls(address)
-    println(det.city)
-    println(det.address)
-    println(det.zipcode)
-    println(det.street)
+    val details = deatls(address)
+    println(details.city)
+    println(details.address)
+    println(details.zipcode)
+    println(details.street)
+    details.hello()
 
-    var squareArea = Square(5)
+    val squareArea = Square(5)
     println(squareArea.area)
     println(squareArea.areaofSquare)
     println(squareArea.rectArea)
     squareArea.rectArea = 5
     println(squareArea.area)
 
-    var getset = GetSet()
+    val getset = GetSet()
     getset.radius = 12
     println(getset.radius)
 
-    var hd = PrivateSet()
-
-    var jkl = UUID.randomUUID()
-    // println(jkl as? String?)
-
-    var x = null
-
-    var y = x as? String
-    println(y is String?)
-
-    var z = x as? String?
-    println(z is String?)
-
-    var b = x as String?
-    println(b is String)
-
-//    var a = x as String
-//    println(a is String)
-
+    val privateSet = PrivateSet()
+    privateSet.hd = 100
 }
