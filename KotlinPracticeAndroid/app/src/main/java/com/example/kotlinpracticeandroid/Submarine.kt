@@ -35,7 +35,6 @@ class Submarine(
         }
     }
 
-
     override fun changeSpeed(speed: Int) { //13
         speedOfSubmarine += speed
     }
