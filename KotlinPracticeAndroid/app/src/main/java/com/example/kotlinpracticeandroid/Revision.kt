@@ -113,6 +113,4 @@ fun main() {
     checkStatus(activity)
     activity.sealedInterface()
     activity.sealedClassuse()
-
-
 }
