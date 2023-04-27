@@ -2,7 +2,7 @@ package com.example.kotlinpracticeandroid
 
 val pi = 3.14
 val oneDouble = 5.0
-val oneMilion = 1_00_000_0L
+val oneMillion = 1_00_000_0L
 
 val isName = true
 val isId = false
