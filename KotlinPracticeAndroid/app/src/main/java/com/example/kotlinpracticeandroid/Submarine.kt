@@ -1,26 +1,34 @@
 package com.example.kotlinpracticeandroid
 
+import kotlin.properties.Delegates
+
 interface ControlSystem {
     val autoPilot: Boolean
+    var fuelMeter: Int
     fun detectEnemy(frequency: Double)
     fun changeSpeed(speed: Int)
-    fun navigation(ordinate: Ordinates)
+    fun navigation(ordinate: CoOrdinates)
 }
 
-data class Ordinates(val x: Float, val y: Float) // 3
+data class CoOrdinates(val x: Int, val y: Int)// 3
 
-class Submarine(
-    val inventationDate: String, // 4
-    val depthCapacity: Double,
-    val typesSubmarine: String,
-    val officersCapacity: Int //5
-    ): ControlSystem { //7
+class Submarine: ControlSystem { //7
 
-    private var speedOfSubmarine = 0 // 6
+    private var submarineSpeed: Int by Delegates.observable(0) { _, oldValue, newValue ->
+        println("old speed is: $oldValue and New value is: $newValue")
+    } // 6
+
     //lateinit var direction: Direction
-    lateinit var ordinateOfSubmarine: Ordinates //8 (current location)
+    lateinit var coordinateOfSubmarine: CoOrdinates  //8 (current location)
+    private val notifyOfficerOfAttack = {alarmOfAttack()}
 
     override var autoPilot: Boolean = true //12
+
+    override var fuelMeter: Int by Delegates.observable(5) {property, oldValue, newValue ->
+        if (newValue < 2) {
+            fillFuelInSubmarine()
+        }
+    }
 
     override fun detectEnemy(frequency: Double) {
         if (frequency > 500) { //10
@@ -29,18 +37,20 @@ class Submarine(
         }
 
         if (frequency < 200) {
-            attackAlarm() //11
+            notifyOfficerOfAttack
+            //alarmOfAttack() //11
             attackOnEnemy()
             autoPilot = false
         }
     }
 
     override fun changeSpeed(speed: Int) { //13
-        speedOfSubmarine += speed
+        submarineSpeed += speed
     }
 
-    override fun navigation(ordinate: Ordinates) { //14
-        ordinateOfSubmarine = Ordinates(ordinate.x, ordinate.y)
+    override fun navigation(coordinate: CoOrdinates) { //14
+        coordinateOfSubmarine = CoOrdinates(coordinate.x, coordinate.y)
+        direction(coordinateOfSubmarine)
     }
 
     private fun attackOnEnemy() { //15
@@ -48,33 +58,67 @@ class Submarine(
         println("Missile is Launch: ${Missile.launchMissile}")
     }
 
-    private fun attackAlarm() {
+    private fun alarmOfAttack() {
         println("Enemy is near about us")
     }
 
-//    fun direction(): String {
-//        if (ordinateOfSubmarine.x >= 0  || ordinateOfSubmarine.y >= 0 && ordinateOfSubmarine.y <= 90) {
-//            return "North"
-//        } else if (ordinateOfSubmarine.x >= 91 && ordinateOfSubmarine.x <= 180 || ordinateOfSubmarine.y >= 91 && ordinateOfSubmarine.y <= 180) {
-//            return "West"
-//        } else if (ordinateOfSubmarine.x >= 181 && ordinateOfSubmarine.x <= 270 || ordinateOfSubmarine.y >= 181 && ordinateOfSubmarine.y <= 270) {
-//            return "South"
-//        } else {
-//            return "East"
+//    val direction = { coordinateOfSubmarine: CoOrdinates ->
+//        when(coordinateOfSubmarine.x) {
+//            in  0..90 -> Direction.East
+//            in -90..0 -> Direction.West
+//        }
+//        when(coordinateOfSubmarine.y){
+//            in 0..90 -> Direction.North
+//            in -90..0 -> Direction.South
+//            else -> ""
 //        }
 //    }
+
+    fun direction(coordinate: CoOrdinates): String {
+        if (coordinateOfSubmarine.x in 0..90 && coordinateOfSubmarine.y == 0) {
+            return "East"
+        } else if (coordinateOfSubmarine.x in -90..0 && coordinateOfSubmarine.y ==0) {
+            return "West"
+        } else if (coordinateOfSubmarine.y in 0..90 && coordinateOfSubmarine.x == 0) {
+            return "North"
+        } else if (coordinateOfSubmarine.y in -90..0 && coordinateOfSubmarine.x == 0) {
+            return "South"
+        } else if (coordinateOfSubmarine.x in 0..90 && coordinateOfSubmarine.y in 0..90) {
+            return "NorthEast"
+        }  else if (coordinateOfSubmarine.x in -90..0 && coordinateOfSubmarine.y in 0..90) {
+            return "NorthWest"
+        }  else if (coordinateOfSubmarine.x in -90..0 && coordinateOfSubmarine.y in -90..0) {
+            return "SouthWest"
+        }  else if (coordinateOfSubmarine.x in 0..90 && coordinateOfSubmarine.y in -90..0) {
+            return "SouthEast"
+        } else {
+            return "please add coordinate exectelly"
+        }
+    }
+
+    fun fillFuelInSubmarine() {
+        FuelSystem.fuelType
+        FuelSystem.capacity
+    }
 }
 
 object Missile {
     var launchMissile: Boolean = false //16
 }
 
+object FuelSystem {
+    const val fuelType: String = "Uranium"
+    const val capacity: Int = 20000
+}
+
 fun main() {
-    val ordinate = Ordinates(250f,250f)
-    val submarine = Submarine("25/02/1990", 200.05, "cruise missile submarine", 20)
+    val ordinate = CoOrdinates(80,0)
+    val submarine = Submarine()
     //submarine.direction = Direction.South //18
-    submarine.ordinateOfSubmarine = ordinate
+    submarine.coordinateOfSubmarine = ordinate
     submarine.changeSpeed(25)
     submarine.detectEnemy(99.55)
     println(submarine.autoPilot)
+    println(submarine.direction(ordinate))
+
 }
