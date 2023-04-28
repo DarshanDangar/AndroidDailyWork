@@ -32,7 +32,7 @@ fun main() {
         println("bank and new bank both equals")
     }
 
-    val(name, address) = hospital
+    val (name, address) = hospital
     println(name)
     println(address)
 }

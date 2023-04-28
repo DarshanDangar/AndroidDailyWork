@@ -8,7 +8,7 @@ object Tv {
 
 }
 
-object RefrigReator{
+object RefrigReator {
 
     fun printRef() {
         println("Object RefrigReator called")
@@ -28,6 +28,7 @@ class AnonymousObject {
     fun getObject() = object {
         val obj: String = "Object"
     }
+
     companion object {}
 
 }
@@ -39,12 +40,12 @@ object checkObject
 
 sealed class FileAction
 
-class Open: FileAction()
+class Open : FileAction()
 
-data class Close(val action: String): FileAction()
+data class Close(val action: String) : FileAction()
 
 fun checked(check: FileAction) {
-    when(check) {
+    when (check) {
         is Open -> println("This is simople class")
         is Close -> println("This is data class")
     }
@@ -54,7 +55,7 @@ fun checked(check: FileAction) {
 
 class Companion {
 
-    companion object C{
+    companion object C {
         private fun check() {
             println("called companion object")
 
@@ -69,19 +70,15 @@ class Companion {
         }
     }
 
-
-
 }
 
-class TypeAliasChecked{
+class TypeAliasChecked {
     var ghj = 55
 }
 
 typealias asd = TypeAliasChecked
 
 fun main() {
-
-
 
     val dataClass = Close("Pending")
     checked(dataClass)
@@ -91,7 +88,7 @@ fun main() {
     val anonymousObject = AnonymousObject()
     anonymousObject.getObject()
 
-    var result = object: Brts {
+    var result = object : Brts {
         override fun root() {
             println("Brts bus root is Iscon-Cross road to Naroda")
         }

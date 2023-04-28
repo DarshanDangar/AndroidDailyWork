@@ -10,7 +10,18 @@ class Example {
     }
 }
 
+object Pilot {
+    var pilotName: String = "BHJ"
+}
+
 fun main() {
+    var pilot = Pilot.pilotName
+    println(pilot)
+    var plt = Pilot.pilotName
+    plt = "dar"
+    println(plt)
+    println(pilot)
     val subExample = Example().SubExample()
     subExample.giveAnswerOuterClass()
+
 }
