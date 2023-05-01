@@ -1,24 +1,11 @@
 package com.example.kotlinpracticeandroid.submarine
 
-import kotlin.properties.Delegates
+interface FuelSystem { //
 
-object FuelSystem { //
+    val fuelType: String
 
-    const val fuelType: String = "Uranium"
+    val capacity: Int
 
-    const val capacity: Int = 20000
-
-    var fuelMeter: Int by Delegates.observable(5) { _, _, newValue ->
-        if (newValue < 2) {
-            SubmarineController().notifyOfFuelLevelIsLow() //
-        }
-    }
-
-    fun fuelDetailNotification(message: String) {
-        //println(message)
-        if (message == "Fuel level is low please add fuel") { //
-            Captain.fillFuelInSubmarine(FuelSystem)
-        }
-    }
+    var fuelMeter: Int
 
 }

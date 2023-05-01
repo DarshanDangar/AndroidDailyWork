@@ -2,12 +2,19 @@ package com.example.kotlinpracticeandroid.submarine
 
 import kotlin.properties.Delegates
 
-object MissileLauncher {
+open class MissileLauncher {
 
-    //var missileCount = Missile().missileCount
+    init {
+        println("Missile Launching...")
+    }
 
-    var launchMissile: Boolean by Delegates.observable(false) { _, _, _ ->
-        if (launchMissile) Missile().missileCount -= 1
+    var missileCount: Int by Delegates.observable(2) { _, old, new ->
+        println("Old missile count is: $old and new Missile Count is: $new")
+        SubmarineController.numbersOfMissileInSubmarine = new
+    }
+
+    var hasLaunchMissile: Boolean by Delegates.observable(false) { _, _, _ ->
+        if (hasLaunchMissile) missileCount - 1
     }
 
 }

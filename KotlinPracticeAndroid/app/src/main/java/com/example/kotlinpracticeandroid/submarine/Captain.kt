@@ -1,8 +1,10 @@
 package com.example.kotlinpracticeandroid.submarine
 
-object Captain : SubmarineController() { //
+class Captain {
+
+    lateinit var submarine: SubmarineController
     fun changeSpeedOfSubmarin(speed: Int) {
-        submarineSpeed += speed
+        submarine.submarineSpeed += speed
     }
 
     fun fillFuelInSubmarine(fuelType: FuelSystem) {
@@ -11,11 +13,11 @@ object Captain : SubmarineController() { //
     }
 
     val attackOnEnemy = {
-        MissileLauncher.launchMissile = true
-        println("Missile is Launch: ${MissileLauncher.launchMissile}")
-            if (Missile().missileCount == 0) {
+        submarine.hasLaunchMissile = true
+        println("Missile is Launch: ${submarine.hasLaunchMissile}")
+            if (submarine.missileCount == 0) {
                 println("Missile is Empty, please help")
-                SubmarineController().notifyForMissileHelp("Missile is empty, please Help")
+                submarine.notifyForMissileHelp("Missile is empty, please Help")
             }
     }
 }
