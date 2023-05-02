@@ -1,6 +1,6 @@
 package com.example.kotlinpracticeandroid.submarine
 
-interface FuelSystem { //
+interface FuelSystem {
 
     val fuelType: String
 
@@ -9,3 +9,4 @@ interface FuelSystem { //
     var fuelMeter: Int
 
 }
+

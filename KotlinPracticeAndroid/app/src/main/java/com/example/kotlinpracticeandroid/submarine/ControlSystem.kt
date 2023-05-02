@@ -4,8 +4,8 @@ interface ControlSystem {
 
     var autoPilot: Boolean
 
-    fun detectEnemy(frequency: Int)
+    fun onReceiveFrequency(frequency: Int)
 
-    fun currentLocation(ordinate: Coordinate)
+    fun navigateTo(ordinate: Coordinate)
 
 }
