@@ -8,4 +8,7 @@ interface ControlSystem {
 
     fun navigateTo(ordinate: Coordinate)
 
+    fun notifyDistanceInFuelSystem(distance: ((Int) -> Unit)?)
+
+    fun setMissileLauncher(missileLaunch: (() -> Unit))
 }

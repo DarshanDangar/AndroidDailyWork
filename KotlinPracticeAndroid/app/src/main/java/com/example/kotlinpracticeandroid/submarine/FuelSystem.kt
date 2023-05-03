@@ -8,5 +8,7 @@ interface FuelSystem {
 
     var fuelMeter: Int
 
+    fun onReceiveDistance(distance: Int)
+
 }
 
