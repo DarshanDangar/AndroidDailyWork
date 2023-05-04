@@ -11,4 +11,5 @@ interface ControlSystem {
     fun notifyDistanceInFuelSystem(distance: ((Int) -> Unit)?)
 
     fun setMissileLauncher(missileLaunch: (() -> Unit))
+
 }

@@ -10,7 +10,7 @@ class SubmarineController : ControlSystem {
 
     private lateinit var missileLauncher: (() -> Unit)
 
-    private var submarineSpeed: Int = 25 //remove observable
+    private var submarineSpeed: Int = 25
         set(value) {
             when {
                 value < 0 -> {
@@ -63,8 +63,8 @@ class SubmarineController : ControlSystem {
         missileLauncher()
     }
 
-    private fun notifyOfAttack() { // na
-        println("Enemy is near us") //
+    private fun notifyOfAttack() {
+        println("Enemy is near us")
     }
 
     override fun navigateTo(ordinate: Coordinate) {
@@ -74,7 +74,6 @@ class SubmarineController : ControlSystem {
 
     private fun attackOnEnemy() {
         missileLauncher()
-        //println("Missile is Launch: ${missileLauncher.hasLaunchMissile}")
     }
 
     override fun notifyDistanceInFuelSystem(distance: ((Int) -> Unit)?) {
