@@ -2,26 +2,27 @@ package com.example.kotlinpracticeandroid
 
 open class Animal(val name: String, val type: String, val life: Int, var color: String) {
 
-    constructor(color: String): this(name = "Puppy", type = "Pet", life = 2, color = color)
+    constructor(color: String) : this(name = "Puppy", type = "Pet", life = 2, color = color)
 
-    open fun isRiding() {
-        println("this horse ride is awesome 45 km/h speed")
+    open fun type() {
+        println("Animal type is: $type")
     }
 }
 
-open class Dog: Animal("Dog", "pet", 5, "White") {
-    val nikName: String = "Tomy"
+open class Dog : Animal("Dog", "pet", 5, "White") {
+    val nikName: String = "Tommy"
 }
 
-class Horse(name: String, type: String, life: Int, color: String): Animal(name,type,life,color) {
+class Horse(name: String, type: String, life: Int, color: String) :
+    Animal(name, type, life, color) {
 
-    constructor(color: String): this("Radhika", "Marwadi", 30, color) {
+    constructor(color: String) : this("Radhika", "Marwadi", 30, color) {
         this.color = color
         println("Sec called")
     }
 
-    override fun isRiding() {
-        super.isRiding()
+    override fun type() {
+        super.type()
     }
 
 }
@@ -38,14 +39,9 @@ class Horse(name: String, type: String, life: Int, color: String): Animal(name,t
 
 // multilevel inheritance
 
-class Puppy: Dog()
+class Puppy : Dog()
 
-class CheckConstructor {
-    val assign: Int
-    constructor(assign: Int) {
-        this.assign = assign
-    }
-}
+class CheckConstructor(val assign: Int)
 
 open class Base {
     init {
@@ -53,13 +49,13 @@ open class Base {
     }
 }
 
-open class Child: Base() {
+open class Child : Base() {
     init {
         println("This is child class")
     }
 }
 
-class GrandChild: Child() {
+class GrandChild : Child() {
     init {
         println("This is grand Child class")
     }
@@ -69,23 +65,18 @@ class GrandChild: Child() {
 fun main() {
 
     val grandChild = GrandChild()
-
-
     val puppy = Puppy()
     println(puppy.name)
     println(puppy.type)
     println(puppy.color)
     println(puppy.life)
     println(puppy.nikName)
-
+    println(grandChild)
     val checkConstructor = CheckConstructor(5)
     println(checkConstructor.assign)
-
-
     val dog = Dog()
     println(dog.nikName)
     println(dog.type)
-
     val horse = Horse("Rozy", "Kathiyawadi", 25, "White")
     println(horse.name)
     println(horse.type)
@@ -94,6 +85,6 @@ fun main() {
     println(chetak.name)
     println(chetak.type)
     println(chetak.color)
-    chetak.isRiding()
+    chetak.type()
 
 }

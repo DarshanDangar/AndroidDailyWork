@@ -8,7 +8,7 @@ object Tv {
 
 }
 
-object RefrigReator {
+object Refrigerator {
 
     fun printRef() {
         println("Object RefrigReator called")
@@ -32,9 +32,6 @@ class AnonymousObject {
     companion object {}
 
 }
-
-
-object checkObject
 
 // sealed class inherit
 
@@ -83,12 +80,10 @@ fun main() {
     val dataClass = Close("Pending")
     checked(dataClass)
 
-    println(checkObject)
-
     val anonymousObject = AnonymousObject()
     anonymousObject.getObject()
 
-    var result = object : Brts {
+    val result = object : Brts {
         override fun root() {
             println("Brts bus root is Iscon-Cross road to Naroda")
         }
@@ -107,9 +102,9 @@ fun main() {
     result.price()
 
     Tv.printTv()
-    RefrigReator.printRef()
+    Refrigerator.printRef()
 
-    var likes = object {
+    val likes = object {
 
         var fbLikes = 0
         var instaLikes = 0

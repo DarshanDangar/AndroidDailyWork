@@ -56,16 +56,18 @@ enum class Season(private val effect: String) {
             println("this season is summer and this is heat season")
         }
     };
+
     abstract fun effected()
 
 }
+
 @JvmInline
 value class Adding(val name: String)
 
 
 fun main() {
 
-    var adding = Adding("Darshan")
+    val adding = Adding("Darshan")
     println(adding)
 //    println(numberOfVehicle)
 //    val color = Cards.Diamond.color
@@ -83,7 +85,7 @@ fun main() {
         println(i)
     }
 
-    var days = Days.Sunday
+    val days = Days.Sunday
     println(Days.valueOf("Sunday"))
     when (days) {
         Days.Monday -> println("Today is Monday")

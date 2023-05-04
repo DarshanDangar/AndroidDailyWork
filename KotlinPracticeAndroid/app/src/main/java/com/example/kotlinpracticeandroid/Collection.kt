@@ -36,33 +36,33 @@ val initLists = List(10, {it * 3})
 
 
 fun main() {
-//    println(initLists)
-//    println(numBuilder)
-//    println(setBuilder)
-//    println(listBuilder)
+    println(initLists)
+    println(numBuilder)
+    println(setBuilder)
+    println(listBuilder)
 
-//    numberList.forEach {
-//        println(it)
-//    }
+    numberList.forEach {
+        println(it)
+    }
 
-//    val iterator = numberList.listIterator()
-//    while (iterator.hasNext()) iterator.next()
-//    while (iterator.hasPrevious()) {
-//        println(iterator.previous())
-//    }
-//    val first = 0
-//    val last = 10
-//    val step = 1
+    val iterator = numberList.listIterator()
+    while (iterator.hasNext()) iterator.next()
+    while (iterator.hasPrevious()) {
+        println(iterator.previous())
+    }
+    val first = 0
+    val last = 10
+    val step = 1
 //    for (int i = first;i <= last; i += step) {
 //        // ...
 //    }
-//    val mutableiteraror = numberList.iterator()
-//    println(numberList)
-//    mutableiteraror.next()
-//    mutableiteraror.next()
-//    mutableiteraror.remove()
-//    println(mutableiteraror)
-//    println(numberList)
+    val mutableiteraror = numberList.iterator()
+    println(numberList)
+    mutableiteraror.next()
+    mutableiteraror.next()
+    mutableiteraror.remove()
+    println(mutableiteraror)
+    println(numberList)
 
     val evenNumber = generateSequence(1) { it * 2 }
     println(evenNumber.take(200).toList())
@@ -127,84 +127,84 @@ fun main() {
 //    for (ele in collection){
 //        println(ele)
 //    }
-//    println(numberList.take(5))
-//    println(numberList.get(4))
-//    println(numberList)
-//    println(numberList.lastIndexOf(8))
-//    println(numberList.last())
-//    //println(collection.listIterator(5)) //list
-//    println(numberList.size)
-//    println(numberList.containsAll(listOf(15)))
-//    println(numberList.isEmpty())
-//    println(numberList.asReversed())
-//    println(numberList.component1())
-//    println(numberList.dropLast(2))
-//    println(numberList.lastIndexOf(6))
-//    println(numberList.takeLast(1))
-//    println(numberList.indexOf(6))
-//    println(numberList.indexOf("Darshan"))
-//    println(numberList.count())
-//    println(numberList.removeAt(2))
-//    println(numberList.shuffle())
-//    println(numberList)
-//    println(numberList.indices)
-//    println(numberList.minus(5))
-//    println(numberList.plus(50))
-//    println(numberList)
-//    println(numberList.takeLast(3))
-//    //collection.add(8, 10 as Nothing)
-//
-//    numberSet.size
-//    println()
-//    println(numberSet.take(5))
-//    println(numberSet)
-//    println(numberSet.size)
-//    println(numberSet.isEmpty())
-//    println(numberSet.containsAll(listOf(5)))
-//    println(numberSet.contains(5))
-//    println(numberSet.indices)
-//    println(numberSet.parallelStream()) // meaning
-//    println(numberSet.spliterator()) // meaning split with iterator
-//    println(numberSet.minus(2))
-//    println(numberSet)
-//    println(numberSet.stream()) // meaning
-//    println(numberSet.min())
-//    println(numberSet.plus(20))
-//    println(numberSet.average())
-//    println(numberSet.distinct()) // meaning
-//    println(numberSet.any())
-//    println(numberSet.max())
-//    println(numberSet.last())
-//    println(numberSet.first())
-//    println(numberSet.first())
-//    println(numberSet.last())
-//    println(numberSet.none())
-//    println(numberSet)
-    //    println(deatilsPersonMap.keys)
-//    println(deatilsPersonMap.values)
-//    println(deatilsPersonMap.keys)
-//    println(deatilsPersonMap.values)
-//    println(deatilsPersonMap.keys)
-//    println(deatilsPersonMap.values)
-//    println(deatilsPersonMap.size)
-//    println(deatilsPersonMap.containsValue(20))
-//    //println(deatilsPersonMap.toList())
-//    println(deatilsPersonMap[1])
-//    println(deatilsPersonMap.get("Darshan"))
-//    println(deatilsPersonMap["Darshan"])
-//    println(deatilsPersonMap)
-//
-//    for (i in deatilsPersonMap.keys) {
-//        println(i)
-//    }
-//
-//    for (i in deatilsPersonMap.values) {
-//        println(i)
-//    }
-//
-//    for (i in deatilsPersonMap) {
-//        println(i)
-//    }
+    println(numberList.take(5))
+    println(numberList.get(4))
+    println(numberList)
+    println(numberList.lastIndexOf(8))
+    println(numberList.last())
+    //println(collection.listIterator(5)) //list
+    println(numberList.size)
+    println(numberList.containsAll(listOf(15)))
+    println(numberList.isEmpty())
+    println(numberList.asReversed())
+    println(numberList.component1())
+    println(numberList.dropLast(2))
+    println(numberList.lastIndexOf(6))
+    println(numberList.takeLast(1))
+    println(numberList.indexOf(6))
+    println(numberList.indexOf("Darshan"))
+    println(numberList.count())
+    println(numberList.removeAt(2))
+    println(numberList.shuffle())
+    println(numberList)
+    println(numberList.indices)
+    println(numberList.minus(5))
+    println(numberList.plus(50))
+    println(numberList)
+    println(numberList.takeLast(3))
+    //collection.add(8, 10 as Nothing)
+
+    numberSet.size
+    println()
+    println(numberSet.take(5))
+    println(numberSet)
+    println(numberSet.size)
+    println(numberSet.isEmpty())
+    println(numberSet.containsAll(listOf(5)))
+    println(numberSet.contains(5))
+    println(numberSet.indices)
+    println(numberSet.parallelStream()) // meaning
+    println(numberSet.spliterator()) // meaning split with iterator
+    println(numberSet.minus(2))
+    println(numberSet)
+    println(numberSet.stream()) // meaning
+    println(numberSet.min())
+    println(numberSet.plus(20))
+    println(numberSet.average())
+    println(numberSet.distinct()) // meaning
+    println(numberSet.any())
+    println(numberSet.max())
+    println(numberSet.last())
+    println(numberSet.first())
+    println(numberSet.first())
+    println(numberSet.last())
+    println(numberSet.none())
+    println(numberSet)
+        println(deatilsPersonMap.keys)
+    println(deatilsPersonMap.values)
+    println(deatilsPersonMap.keys)
+    println(deatilsPersonMap.values)
+    println(deatilsPersonMap.keys)
+    println(deatilsPersonMap.values)
+    println(deatilsPersonMap.size)
+    println(deatilsPersonMap.containsValue(20))
+    //println(deatilsPersonMap.toList())
+    println(deatilsPersonMap[1])
+    println(deatilsPersonMap.get("Darshan"))
+    println(deatilsPersonMap["Darshan"])
+    println(deatilsPersonMap)
+
+    for (i in deatilsPersonMap.keys) {
+        println(i)
+    }
+
+    for (i in deatilsPersonMap.values) {
+        println(i)
+    }
+
+    for (i in deatilsPersonMap) {
+        println(i)
+    }
 
 }
 

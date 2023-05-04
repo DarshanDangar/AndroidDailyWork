@@ -15,12 +15,11 @@ object Pilot {
 }
 
 fun main() {
-    var pilot = Pilot.pilotName
-    println(pilot)
-    var plt = Pilot.pilotName
-    plt = "dar"
-    println(plt)
-    println(pilot)
+    Pilot.pilotName
+    println(Pilot.pilotName)
+    Pilot.pilotName = "Darshan"
+    println(Pilot.pilotName)
+    println(Pilot)
     val subExample = Example().SubExample()
     subExample.giveAnswerOuterClass()
 
