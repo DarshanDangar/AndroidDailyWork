@@ -14,14 +14,16 @@ class SubmarineController : ControlSystem {
         set(value) {
             when {
                 value < 0 -> {
+                    println("old speed is: $submarineSpeed")
                     field = 0
-                    println("old speed is: $value and New value is: $field")
+                    println("New speed is: $field")
                 }
                 value > 0 -> {
-                    println("old speed is: $value and New value is: $field")
+                    println("old speed is: $submarineSpeed")
+                    field = value
+                    println("New speed is: $field")
                 }
             }
-            field = value
         }
 
     private var coveredDistance = 0
@@ -45,7 +47,7 @@ class SubmarineController : ControlSystem {
 
     override fun onReceiveFrequency(frequency: Int) {
         when (frequency) {
-            in 200..500 -> {
+            in 200..500-> {
                 changeSpeedOfSubmarin(-10)
                 missileLauncher()
             }

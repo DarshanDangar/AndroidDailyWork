@@ -14,8 +14,8 @@ sealed class Demo {
 
         fun printTest() {
             println("Test class is called")
-            var a = 5
-            var b = 7
+            val a = 5
+            val b = 7
             val max = if (a > b) {
                 print("Choose a")
                 a
@@ -34,11 +34,11 @@ sealed class Factory(name: String) {
 }
 
 class FoodFactory: Factory("Balaji Pvt.ltd")
-class CotonFactory: Factory("MN Yearns")
+class CottonFactory: Factory("MN Yearns")
 class Gidc: Factory("Gidc gate no. 2")
 
 var foodFactory = FoodFactory()
-var cotonFactory = CotonFactory()
+var cottonFactory = CottonFactory()
 var gidc = Gidc()
 
 sealed interface Body {
@@ -91,14 +91,14 @@ fun main() {
     fun factoryType(name: Factory) {
         when(name){
             is FoodFactory -> println("this is food factory ${foodFactory.namee}" )
-            is CotonFactory -> println("this is coton factory")
+            is CottonFactory -> println("this is coton factory")
             is Gidc -> println("This is gidc")
         }
     }
 
     //println(cotonFactory.namee)
     factoryType(foodFactory)
-    factoryType(cotonFactory)
+    factoryType(cottonFactory)
     factoryType(gidc)
 
 }

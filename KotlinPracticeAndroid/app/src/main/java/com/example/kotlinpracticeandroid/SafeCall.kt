@@ -103,13 +103,13 @@ fun main() {
         }
     println(darshanRockStarBrainCellCount)
 
-    val darshanRockStarHasCommensense = darshanRockStar
+    val DarshanRockStarHasCommonsense = darshanRockStar
         .hasCommonSense
         .let {
             println(it)
             it
         }
-    println(darshanRockStarHasCommensense)
+    println(DarshanRockStarHasCommonsense)
 
      val darshanTheRockStarUseElvisOp = darshanTheRockStar
         .hands

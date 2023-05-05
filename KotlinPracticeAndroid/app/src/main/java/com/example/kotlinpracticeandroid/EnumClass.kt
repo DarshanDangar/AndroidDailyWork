@@ -32,7 +32,7 @@ enum class Days {
     Monday,
     Tuesday,
     Wednesday,
-    Thurssday,
+    Thursday,
     Friday,
     Saturday,
     Sunday
@@ -64,21 +64,20 @@ enum class Season(private val effect: String) {
 @JvmInline
 value class Adding(val name: String)
 
-
 fun main() {
 
     val adding = Adding("Darshan")
     println(adding)
-//    println(numberOfVehicle)
-//    val color = Cards.Diamond.color
-//    println(bikeNumber)
-//    println(color)
-//
-//    for (i in Days.values()) {
-//        println(i.name)
-//    }
-//
-//    fun foo() {}
+    println(numberOfVehicle)
+    val color = Cards.Diamond.color
+    println(bikeNumber)
+    println(color)
+
+    for (i in Days.values()) {
+        println(i.name)
+    }
+
+    fun foo() {}
     var win = Season.Winter.effected()
 
     for (i in Days.values()) {
@@ -91,7 +90,7 @@ fun main() {
         Days.Monday -> println("Today is Monday")
         Days.Tuesday -> println("Today is Tuesday")
         Days.Wednesday -> println("Today is Wednesday")
-        Days.Thurssday -> println("Today is Thursday")
+        Days.Thursday -> println("Today is Thursday")
         Days.Friday -> println("Today is Friday")
         Days.Saturday -> println("Today is Saturday")
         Days.Sunday -> println("Today is Sunday")

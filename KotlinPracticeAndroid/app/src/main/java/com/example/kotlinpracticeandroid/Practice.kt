@@ -1,23 +1,17 @@
 package com.example.kotlinpracticeandroid
 
-import kotlin.properties.Delegates
-
 class Practice {
 
     var name: String = "Darshan"
         private set
 
-    //get() = field
-//    set(value) {
-//        field = value
-//    }
-    fun ji() {
+    fun details() {
         name = "nkn"
     }
 
 }
 
-open class SystemPc(val name: String, val price: Int) {
+open class SystemPc(val name: String, private val price: Int) {
 
     open val add = 5
 
@@ -29,6 +23,7 @@ open class SystemPc(val name: String, val price: Int) {
 }
 
 class Laptop(name: String, price: Int, val weight: Int) : SystemPc(name, price) {
+
     override var add: Int = 10
 
     constructor(name: String, price: Int, weight: Int, camera: Boolean) : this(
@@ -38,6 +33,7 @@ class Laptop(name: String, price: Int, val weight: Int) : SystemPc(name, price) 
     ) {
         add = weight
     }
+
 }
 
 inline fun passLambdas(lambda: () -> Unit) {
@@ -49,9 +45,41 @@ inline fun passTwoLambdas(lambda1: () -> Unit, noinline lambda2: () -> Unit) {
     lambda2()
 }
 
+val addTwoNumber = { num1: Int, num2: Int -> num1 + num2 }
+
+fun add(num1: Int, num2: (Int) -> Unit) {
+    num2(num1)
+}
+
+fun minus(num1: Int, num2: Int) {
+    println(num2 - num1)
+}
+
+fun calculate(num1: Int, num2: Int, calculation: (Int, Int) -> Unit) {
+    calculation(num1, num2)
+}
+
+val multiply: (Int, Int) -> Unit = { num1, num2 ->
+    println(num1 * num2)
+}
+
+abstract class Isro {
+    abstract fun launch()
+    fun fly() {
+        println("Fly")
+    }
+}
+
 fun main() {
-    fun name(a: Int, b: (String) -> Unit) {
-        println(a)
+
+    calculate(5, 8, ::minus)
+    calculate(10, 2, multiply)
+    add(5) {
+        println(it * it)
+    }
+    println(addTwoNumber(5, 10))
+    fun name(age: Int, address: (String) -> Unit) {
+        println(age)
     }
 
     name(5) {
@@ -134,4 +162,31 @@ fun main() {
             valueTransform = { it })
     )
 
+    val numList = listOf(1,2,3,4,5,6)
+    val d = numList.filter {
+        it > 4
+    }
+        .map {
+            println(it)
+        }
+        .take(2)
+    println()
+
+    val numListSequence = sequenceOf(1,2,3,4,5,6)
+    val dd = numList.filter { it > 4
+    }
+        .map {
+            println(it)
+        }
+        .take(2)
+    println()
+
+    val nameString = listOf("Shubham", "Darshan", "Shyam")
+    val resultString = nameString.filter {
+        it.length > 6
+    }
+        .map {
+            println(it)
+        }
+        .take(2)
 }

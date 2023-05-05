@@ -6,7 +6,7 @@ package com.example.kotlinpracticeandroid
 val byte: Byte = 10
 val short: Short = 20
 
-val floatdigit = 20.5f
+val floatDigit = 20.5f
 val doubleDigit = 52.6
 
 val longDigit = 45645231L
@@ -47,7 +47,7 @@ val operator = "/"
 //
 //}
 
-// program entery point
+// program entry point
 
 fun main(args: Array<String>) {
     println("Hello")
@@ -67,7 +67,7 @@ fun add(digit1: Int, digit2: Int) {
 }
 
 fun sub(num1: Int, num2: Int) {
-    println(num1 * num2) // unit is this function rreturn no meaningful value
+    println(num1 * num2) // unit is this function return no meaningful value
 }
 
 fun unnamed() {
