@@ -6,10 +6,10 @@ interface ControlSystem {
 
     fun onReceiveFrequency(frequency: Int)
 
-    fun navigateTo(ordinate: Coordinate)
+    fun navigateTo(cordinate: Coordinate)
 
     fun notifyDistanceInFuelSystem(distance: ((Int) -> Unit)?)
 
-    fun setMissileLauncher(missileLaunch: (() -> Unit))
+    fun setMissileLauncher(missileLaunch: ((coordinate: Coordinate) -> Unit))
 
 }

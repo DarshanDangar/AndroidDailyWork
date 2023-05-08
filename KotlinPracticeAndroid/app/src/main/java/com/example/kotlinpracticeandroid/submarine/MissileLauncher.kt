@@ -4,8 +4,8 @@ class MissileLauncher {
 
     private var missileCount: Int = 10
 
-    fun launchMissile() {
-        println("Missile Launching...")
+    fun launchMissile(coordinate: Coordinate) {
+        println("Missile Launching...this coordinates: ${coordinate.x} and ${coordinate.y}")
         missileCount -= 1
         println("missile count is: $missileCount")
         if (missileCount == 0) {

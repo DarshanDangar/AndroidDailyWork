@@ -6,9 +6,7 @@ class SubmarineController : ControlSystem {
 
     private val listOfFakeFrequency = listOf(505, 800, 100, 300, 900)
 
-    private val notifyDistance: ((Int) -> Unit)? = null
-
-    private lateinit var missileLauncher: (() -> Unit)
+    private lateinit var missileLauncher: ((co: Coordinate) -> Unit)
 
     private var submarineSpeed: Int = 25
         set(value) {
@@ -36,7 +34,6 @@ class SubmarineController : ControlSystem {
     ) { _, old, new ->
         println("Notify successfully this $new")
         coveredDistance = (new.x - old.x) + (new.y - old.y)
-        notifyDistance?.invoke(coveredDistance)
     }
 
     override var autoPilot: Boolean = false
@@ -47,9 +44,12 @@ class SubmarineController : ControlSystem {
 
     override fun onReceiveFrequency(frequency: Int) {
         when (frequency) {
+            in 500..1000 -> {
+                println("Situation normal")
+            }
             in 200..500-> {
-                changeSpeedOfSubmarin(-10)
-                missileLauncher()
+                changeSpeedOfSubmarin(10)
+                missileLauncher(nextNavigateTo)
             }
             in 0..200 -> {
                 detectEnemy()
@@ -61,28 +61,27 @@ class SubmarineController : ControlSystem {
         notifyOfAttack()
         attackOnEnemy()
         autoPilot = false
-        changeSpeedOfSubmarin(10)
-        missileLauncher()
+        changeSpeedOfSubmarin(-submarineSpeed)
     }
 
     private fun notifyOfAttack() {
         println("Enemy is near us")
     }
 
-    override fun navigateTo(ordinate: Coordinate) {
-        nextNavigateTo = ordinate
+    override fun navigateTo(cordinate: Coordinate) {
+        nextNavigateTo = cordinate
         onReceiveFrequency(listOfFakeFrequency.random())
     }
 
     private fun attackOnEnemy() {
-        missileLauncher()
+        missileLauncher(nextNavigateTo)
     }
 
     override fun notifyDistanceInFuelSystem(distance: ((Int) -> Unit)?) {
         distance?.invoke(coveredDistance)
     }
 
-    override fun setMissileLauncher(launcher: () -> Unit) {
+    override fun setMissileLauncher(launcher: (coordinate: Coordinate) -> Unit) {
         missileLauncher = launcher
     }
 
