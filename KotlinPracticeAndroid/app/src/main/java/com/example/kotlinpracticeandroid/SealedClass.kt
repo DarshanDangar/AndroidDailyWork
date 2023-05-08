@@ -30,7 +30,7 @@ sealed class Demo {
 }
 
 sealed class Factory(name: String) {
-    var namee = name
+    var factoryName = name
 }
 
 class FoodFactory: Factory("Balaji Pvt.ltd")
@@ -54,7 +54,7 @@ sealed class BodyPart: Body {
 
 class Xyz: BodyPart() {
     override fun isReal() {
-        println("xyz method use via bodypart")
+        println("xyz method use via BodyPart")
     }
 }
 
@@ -75,14 +75,10 @@ fun main() {
     val test = Demo.Test()
     test.printTest()
 
-    when(res) {
-        is Demo.Res -> println("When is used forResource")
-    }
-
-    var age = 55
-    var result = when(age) {
-      in 18..60->  println("You are eligible for voting")
-      else -> {"You are not eligible for voting"}
+    val age = 55
+    val result: String = when(age) {
+      in 18..60 -> "You are eligible for voting"
+      else -> "You are not eligible for voting"
     }
     println(result)
 
@@ -90,13 +86,13 @@ fun main() {
 
     fun factoryType(name: Factory) {
         when(name){
-            is FoodFactory -> println("this is food factory ${foodFactory.namee}" )
-            is CottonFactory -> println("this is coton factory")
+            is FoodFactory -> println("this is food factory ${foodFactory.factoryName}" )
+            is CottonFactory -> println("this is cotton factory")
             is Gidc -> println("This is gidc")
         }
     }
 
-    //println(cotonFactory.namee)
+    //println(cottonFactory.name)
     factoryType(foodFactory)
     factoryType(cottonFactory)
     factoryType(gidc)

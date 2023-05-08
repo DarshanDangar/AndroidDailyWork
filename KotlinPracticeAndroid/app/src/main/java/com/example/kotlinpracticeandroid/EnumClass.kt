@@ -27,15 +27,15 @@ enum class Cards(val color: String) {
 
 }
 
-enum class Days {
+enum class Days(val no: Int) {
 
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday
+    Monday(1),
+    Tuesday(2),
+    Wednesday(3),
+    Thursday(4),
+    Friday(5),
+    Saturday(6),
+    Sunday(7)
 
 }
 
@@ -64,9 +64,27 @@ enum class Season(private val effect: String) {
 @JvmInline
 value class Adding(val name: String)
 
+//enum class DayOfWeek(val displayName: String) {
+//    SUNDAY("Sunday"), // ordinal = 0
+//    MONDAY("Monday"), // ordinal = 1
+//    TUESDAY("Tuesday") {
+//        override val ordinal: Int
+//        get() = 42 // Assigning a preferred ordinal value
+//        },
+//     // ... other constants
+//}
+
 fun main() {
 
     val adding = Adding("Darshan")
+    val day = Days.Monday
+    val t = when(Days.Monday.no) {
+        1 -> println("Never")
+        2 -> println("Used")
+        else -> println("d")
+    }
+    println(t)
+    println(day.ordinal)
     println(adding)
     println(numberOfVehicle)
     val color = Cards.Diamond.color

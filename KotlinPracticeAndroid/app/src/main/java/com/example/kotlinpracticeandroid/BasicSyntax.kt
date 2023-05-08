@@ -1,20 +1,14 @@
 package com.example.kotlinpracticeandroid
 
-val pi = 3.14
+const val pi = 3.14
 val oneDouble = 5.0
 val oneMillion = 1_00_000_0L
 
 val isName = true
 val isId = false
 
-val charact = 'c'
-val newCharact: Char = 'd'
-
-fun typeCheck() {
-    println(pi is Double)
-    println(oneDouble is Double)
-    println(numberLong is Long)
-}
+val character = 'c'
+val newCharacter: Char = 'd'
 
 fun testType(digitDouble: Double) {
     println(digitDouble)
@@ -22,73 +16,46 @@ fun testType(digitDouble: Double) {
 
 val numberLong = 5L
 
-val str = "Darshan"
+val nameString = "Darshan"
 
-var array = IntArray(5) {it * 2}
-
-fun main() {
-//    typeCheck()
-//    testType(5.0)
-//    testType(8.0)
-//    println(isName && isId)
-//    println(isName || isId)
-//    println(!isName)
-//    println(charact)
-//    println('\n')
-//    for (i in str) {
-//        println(i)
-//    }
-//    println(str.uppercase())
-//    println(str)
-//    println("String is: ${str.length}")
-//    println()
-    val person = Person("Darshan", 21)
-    person.name()
-    println(car.name)
-
-    val deatils = Deatils()
-    deatils.main()
-
-}
+var array = IntArray(5) { it * 2 }
 
 class Person(name: String, age: Int) {
-    var personName: String
-    var personAge: Int
+
+    private var personName: String
+    private var personAge: Int
+
     init {
         personName = name
         personAge = age
         println("personName initialized and that is: $personName")
     }
 
-    fun name(){
+    fun name() {
         println(personName)
-        student.deatil()
+        student.detail()
     }
 
 }
 
-class Student(val studentId: Int = 0, val studentDepartment: String) {
+class Student(private val studentId: Int = 0, private val studentDepartment: String) {
 
-    fun deatil() {
+    fun detail() {
         println("Student id is: $studentId and student Department is: $studentDepartment")
     }
-    constructor(studentDepartment: String) : this(0,studentDepartment) {
-        println("newdepartment is: $studentDepartment")
+
+    constructor(studentDepartment: String) : this(0, studentDepartment) {
+        println("newDepartment is: $studentDepartment")
     }
+
 }
 
-//var student = Student(studentDepartment = "yyu")
-var student = Student(17,"Computer Engineering")
+var student = Student(17, "Computer Engineering")
 var studentMech = Student("Mechanical")
-
-//var student = Student("Darshan")
 
 class Vehicle(var name: String)
 
 var car = Vehicle("Weganor")
-
-// inheritance
-// all class by default final so can't inherit therefore make open
 
 open class Transport(var transportRoot: String, var transportName: String) {
     open fun price() {
@@ -96,7 +63,7 @@ open class Transport(var transportRoot: String, var transportName: String) {
     }
 }
 
-class VehicleTransport(var price: Int, transportName: String, transportRoot: String) :
+class VehicleTransport(private var price: Int, transportName: String, transportRoot: String) :
     Transport(transportRoot, transportName) {
     override fun price() {
         super.price()
@@ -107,7 +74,8 @@ class VehicleTransport(var price: Int, transportName: String, transportRoot: Str
     }
 }
 
-class Bus(price: Int, transportRoot: String, transportName: String) : Transport(transportRoot, transportName) {
+class Bus(price: Int, transportRoot: String, transportName: String) :
+    Transport(transportRoot, transportName) {
 
     var money = price
 
@@ -116,13 +84,45 @@ class Bus(price: Int, transportRoot: String, transportName: String) : Transport(
     }
 }
 
-class Deatils {
+class Details {
 
-    var truck = VehicleTransport(1000, "Dangar Logistics", "Rajkot - Ahmedabad")
+    private var truck = VehicleTransport(1000, "Dangar Logistics", "Rajkot - Ahmedabad")
 
     fun main() {
         truck.price()
     }
+}
+
+fun main() {
+
+    testType(5.0)
+    testType(8.0)
+    println(isName && isId)
+    println(isName || isId)
+    println(!isName)
+    println(character)
+    println('\n')
+    for (element in nameString) {
+        println(element)
+    }
+    println(nameString.uppercase())
+    println(nameString)
+    println("String is: ${nameString.length}")
+    println()
+    val person = Person("Darshan", 21)
+    person.name()
+    println(car.name)
+
+    val details = Details()
+    details.main()
+    println(pi)
+    println(oneDouble)
+    println(numberLong)
+    println(oneMillion)
+    println(newCharacter)
+    println(array)
+    println(studentMech)
+
 }
 
 

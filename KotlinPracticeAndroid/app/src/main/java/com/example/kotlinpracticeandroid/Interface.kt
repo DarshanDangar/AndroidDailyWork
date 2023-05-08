@@ -7,7 +7,7 @@ interface Engine {
 
     fun isComplete()
     fun price() {
-        println("car price is:")
+        println("car price is:120k")
     }
 
 }
@@ -20,32 +20,26 @@ class Car(override var condition: Int, override var maaterial: String) : Engine 
         }
     }
 
-    override fun price() {
-        super.price()
-        println("Car price is 35% off by car road price")
-    }
+//    override fun price() {
+//        super.price()
+//        println("Car price is 35% off by car road price")
+//    }
 
 }
 
 fun main() {
 
-//    var car = Car(85,"StainlessSteel")
-//    car.isComplete()
-//    car.price()
-//
-//    var price = AboutPrice()
-//    println(price.useMaterial)
-//    println(price.buildingType)
-//    println(price.price)
-//    xyz = 50 // ClassInstance file ma 37
-//    println(internalProperty)
+    val car = Car(85,"StainlessSteel")
+    car.isComplete()
+    car.price()
 
-    val unNamedff = UnNa(5)
-    println(unNamedff)
+    val price = AboutPrice()
+    println(price.useMaterial)
+    println(price.buildingType)
+    println(price.price)
+    xyz = 50 // ClassInstance file ma 37
+    println(internalProperty)
 
-
-//    var demo = Demo.Res() // sealed class use in same package
-//    demo.printRes()
 }
 
 // interface inheritance
@@ -73,16 +67,6 @@ class AboutPrice: House {
 
     override val price: Long
         get() = 25000000
-
-}
-
-//
-
-interface Unnamed {
-    var un: Int
-}
-
-class UnNa(override var un: Int = 5): Unnamed {
 
 }
 

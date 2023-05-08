@@ -1,8 +1,5 @@
 package com.example.kotlinpracticeandroid
 
-//val digit = 15
-//var number = 20
-
 val byte: Byte = 10
 val short: Short = 20
 
@@ -13,7 +10,7 @@ val longDigit = 45645231L
 
 // Array
 
-var mark = arrayOf(5, 4, 6, 9, 8, 5, 7, "Darshan")
+var subjectMark = arrayOf(5, 4, 6, 9, 8, 5, 7, "Darshan")
 
 var intArray = intArrayOf(5, 10, 15, 20, 25, 30)
 
@@ -43,20 +40,7 @@ val Digit = 15
 val digitN = 10
 val operator = "/"
 
-//val resultOp = when (operator) {
-//
-//}
-
 // program entry point
-
-fun main(args: Array<String>) {
-    println("Hello")
-    println("${fullName.length}")
-    println(result)
-    println(sum(5, 4))
-    add(8, 9)
-    sub(5, 4)
-}
 
 fun sum(num1: Int, num2: Int): Int {
     return num1 + num2
@@ -66,10 +50,20 @@ fun add(digit1: Int, digit2: Int) {
     println(digit1 + digit2)
 }
 
-fun sub(num1: Int, num2: Int) {
+fun multiply(num1: Int, num2: Int) {
     println(num1 * num2) // unit is this function return no meaningful value
 }
 
 fun unnamed() {
     println("unnamed uses")
+}
+
+fun main(args: Array<String>) {
+    unnamed()
+    println("Hello")
+    println("${fullName.length}")
+    println(result)
+    println(sum(5, 4))
+    add(8, 9)
+    multiply(5, 4)
 }

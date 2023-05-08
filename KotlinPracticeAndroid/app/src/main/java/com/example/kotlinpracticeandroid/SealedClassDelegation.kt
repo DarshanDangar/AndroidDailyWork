@@ -5,7 +5,7 @@ sealed interface Shape {
     fun area()
 }
 
-class ShapeImpl: Shape {
+object ShapeImpl : Shape {
     override fun area() {
         println("area is called")
     }
@@ -15,13 +15,11 @@ class ShapeImpl: Shape {
     }
 }
 
-sealed class Shapeis(val shape: Shape): Shape by shape
+sealed class Shapes(val shape: Shape): Shape by shape
 
-val shapeimpl = ShapeImpl()
+val shapeImpl = ShapeImpl
 
-class Square2: Shapeis(shapeimpl) {
-
-}
+class Square2: Shapes(shapeImpl)
 
 fun main() {
     val square = Square2()

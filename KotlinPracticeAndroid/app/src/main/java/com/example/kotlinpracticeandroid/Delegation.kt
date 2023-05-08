@@ -10,11 +10,12 @@ class Men: NotifyManager {
    override fun notification() {
        println("Notification added")
    }
+
   }
 
-class Samsungs(notification: NotifyManager): NotifyManager by notification {
+class Samsung(notification: NotifyManager): NotifyManager by notification {
     fun added() {
-        println("Notify sucessfully")
+        println("Notify successfully")
     }
 }
 interface Download {
@@ -56,7 +57,7 @@ class StoredKeyValue(val map: Map<String, Any>){
 
 fun main() {
     val men = Men()
-    val samsung = Samsungs(men)
+    val samsung = Samsung(men)
     samsung.notification()
     samsung.added()
 

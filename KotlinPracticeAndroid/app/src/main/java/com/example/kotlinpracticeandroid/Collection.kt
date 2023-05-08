@@ -4,8 +4,15 @@ val numberList = mutableListOf(5, "Darshan", 5.0, 6, 8, 9, 10, 5)
 
 val numberSet = setOf(5, 4, 8, 9, 10, 12, 14, 5, 2)
 
-val deatilsPersonMap = mapOf("Darshan" to 21, "Shyam" to 21.2, "Shubham" to 20, "Sagar" to 21.5, "Rajan" to 21.3, "Priyanshu" to 21.4,
-25 to 21)
+val detailsPersonMap = mapOf(
+    "Darshan" to 21,
+    "Shyam" to 21.2,
+    "Shubham" to 20,
+    "Sagar" to 21.5,
+    "Rajan" to 21.3,
+    "Priyanshu" to 21.4,
+    25 to 21
+)
 
 val numBuilder = buildMap {
     put("CSE", 1)
@@ -32,7 +39,7 @@ val emptySet = emptySet<Any>()
 
 val emptyMap = emptyMap<Int, String>()
 
-val initLists = List(10, {it * 3})
+val initLists = List(10, { it * 3 })
 
 
 fun main() {
@@ -53,43 +60,41 @@ fun main() {
     val first = 0
     val last = 10
     val step = 1
-//    for (int i = first;i <= last; i += step) {
-//        // ...
-//    }
-    val mutableiteraror = numberList.iterator()
+
+    val mutableIterator = numberList.iterator()
     println(numberList)
-    mutableiteraror.next()
-    mutableiteraror.next()
-    mutableiteraror.remove()
-    println(mutableiteraror)
+    mutableIterator.next()
+    mutableIterator.next()
+    mutableIterator.remove()
+    println(mutableIterator)
     println(numberList)
 
     val evenNumber = generateSequence(1) { it * 2 }
     println(evenNumber.take(200).toList())
     println(evenNumber.take(10).toList())
 
-    val lessthan10 = generateSequence(1) { if(it < 10) it + 1 else it}
+    val lessthan10 = generateSequence(1) { if (it < 10) it + 1 else it }
     println(lessthan10.take(15).toList())
-    
-    val numberListChunk = sequence { 
+
+    val numberListChunk = sequence {
         yield(5)
-        yieldAll(listOf(8,10,12))
+        yieldAll(listOf(8, 10, 12))
         yieldAll(generateSequence(20) { it + 1 })
-        
+
     }
     println(numberListChunk.take(20).toList())
 
-    val strL = "My Name is Darshan Dangar My Native place is Rajkot".split(" ")
-    val sqstr = strL.asSequence()
-    val lsqstr = sqstr.filter { println(it); it.length > 5 }
+    val sentence = "My Name is Darshan Dangar My Native place is Rajkot".split(" ")
+    val sequenceSentence = sentence.asSequence()
+    val sequenceSentenceLengthGraterthan5 = sequenceSentence.filter { println(it); it.length > 5 }
         .map { println("${it.length}"); it.length }
         .take(3)
-    println(lsqstr.toList())
+    println(sequenceSentenceLengthGraterthan5.toList())
 
     println(numberSet.filter { it > 5; }
         .map { println(it); it }
         .take(3)
-        )
+    )
 
     val numbers = listOf("one", "two", "three", "four")
     val filterResults = mutableListOf<String>()  //destination object
@@ -112,23 +117,19 @@ fun main() {
 
     val animalList = listOf("Lion", "Horse", "Dog")
     val animalColor = listOf("Orange", "White", "Red")
-    val resAnimal = animalList zip animalColor
-    val resoAnimal = animalList.zip(animalColor)
+    val animal = animalList zip animalColor
+    //val animal = animalList.zip(animalColor)
     println()
-    println(resAnimal)
-    println(resoAnimal)
-    println(animalList.zip(animalColor) {animalList, animalColor -> "$animalList color is: $animalColor"})
+    println(animal)
+    println(animal)
+    println(animalList.zip(animalColor) { animalList, animalColor -> "$animalList color is: $animalColor" })
 
     val table = listOf("Darshan" to 1, "Shyam" to 2, "Shubham" to 3)
     println(table.unzip())
     println(table.size)
 
-
-//    for (ele in collection){
-//        println(ele)
-//    }
     println(numberList.take(5))
-    println(numberList.get(4))
+    println(numberList[4])
     println(numberList)
     println(numberList.lastIndexOf(8))
     println(numberList.last())
@@ -152,10 +153,8 @@ fun main() {
     println(numberList.plus(50))
     println(numberList)
     println(numberList.takeLast(3))
-    //collection.add(8, 10 as Nothing)
 
     numberSet.size
-    println()
     println(numberSet.take(5))
     println(numberSet)
     println(numberSet.size)
@@ -163,15 +162,15 @@ fun main() {
     println(numberSet.containsAll(listOf(5)))
     println(numberSet.contains(5))
     println(numberSet.indices)
-    println(numberSet.parallelStream()) // meaning
-    println(numberSet.spliterator()) // meaning split with iterator
+    println(numberSet.parallelStream())
+    println(numberSet.spliterator())
     println(numberSet.minus(2))
     println(numberSet)
-    println(numberSet.stream()) // meaning
+    println(numberSet.stream())
     println(numberSet.min())
     println(numberSet.plus(20))
     println(numberSet.average())
-    println(numberSet.distinct()) // meaning
+    println(numberSet.distinct())
     println(numberSet.any())
     println(numberSet.max())
     println(numberSet.last())
@@ -180,29 +179,29 @@ fun main() {
     println(numberSet.last())
     println(numberSet.none())
     println(numberSet)
-        println(deatilsPersonMap.keys)
-    println(deatilsPersonMap.values)
-    println(deatilsPersonMap.keys)
-    println(deatilsPersonMap.values)
-    println(deatilsPersonMap.keys)
-    println(deatilsPersonMap.values)
-    println(deatilsPersonMap.size)
-    println(deatilsPersonMap.containsValue(20))
-    //println(deatilsPersonMap.toList())
-    println(deatilsPersonMap[1])
-    println(deatilsPersonMap.get("Darshan"))
-    println(deatilsPersonMap["Darshan"])
-    println(deatilsPersonMap)
+    println(detailsPersonMap.keys)
+    println(detailsPersonMap.values)
+    println(detailsPersonMap.keys)
+    println(detailsPersonMap.values)
+    println(detailsPersonMap.keys)
+    println(detailsPersonMap.values)
+    println(detailsPersonMap.size)
+    println(detailsPersonMap.containsValue(20))
+    println(detailsPersonMap.toList())
+    println(detailsPersonMap[1])
+    println(detailsPersonMap.get("Darshan"))
+    println(detailsPersonMap["Darshan"])
+    println(detailsPersonMap)
 
-    for (i in deatilsPersonMap.keys) {
+    for (i in detailsPersonMap.keys) {
         println(i)
     }
 
-    for (i in deatilsPersonMap.values) {
+    for (i in detailsPersonMap.values) {
         println(i)
     }
 
-    for (i in deatilsPersonMap) {
+    for (i in detailsPersonMap) {
         println(i)
     }
 

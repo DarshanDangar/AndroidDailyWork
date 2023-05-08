@@ -21,14 +21,14 @@ fun main() {
     val bal = bank.component2()
     println(bal)
 
-    val newAcno = bank.copy(352451510000, 58245423)
+    val newAcno = bank.copy(userAcno = 352451510000, balance = 58245423)
     println(newAcno)
     println(newAcno.hashCode())
 
     val newBank = bank.copy()
     println(newBank.hashCode())
 
-    if (bank.equals(newBank)) {
+    if (bank == newBank) {
         println("bank and new bank both equals")
     }
 

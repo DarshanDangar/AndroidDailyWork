@@ -6,7 +6,7 @@ interface DatabaseService {
     }
 }
 
-val databaseService = object : DatabaseService { }
+val databaseService = object : DatabaseService {}
 
 var progress: Int = 0
     set(value) {

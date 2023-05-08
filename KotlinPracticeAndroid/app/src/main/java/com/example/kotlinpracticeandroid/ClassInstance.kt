@@ -1,23 +1,25 @@
 package com.example.kotlinpracticeandroid
 
-// class and instance
-
 class Area(radius: Int) {
+
     companion object {
         val ct: String by lazy {
 
             ""
         }
     }
-    var area = radius * radius
+
+    private var area = radius * radius
+
     fun printArea(){
         println(area)
     }
+
     fun max(digit1: Int, digit2: Int): Int {
-        if (digit1 > digit2){
-            return digit1
+        return if (digit1 > digit2){
+            digit1
         } else {
-            return digit2
+            digit2
         }
     }
 
@@ -27,13 +29,20 @@ class Area(radius: Int) {
 
 }
 
+var xyz = 5
+private var privateProperty = 500
+internal var internalProperty = 5000
+
 fun main() {
+
     val area = Area(5)
     area.printArea()
     println(area.max(10,12))
+
     for (i in area.iteam) {
         println(i)
     }
+
     for (i in area.iteam.indices) {
         println(i)
     }
@@ -41,7 +50,3 @@ fun main() {
     println(privateProperty)
 
 }
-
-var xyz = 5
-private var privateProperty = 500
-internal var internalProperty = 5000 // use only same module(package) (app)

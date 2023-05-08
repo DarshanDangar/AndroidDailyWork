@@ -19,9 +19,7 @@ interface Apple {
 }
 
 @JvmInline
-value class ConvertSquare(val num: Int) {
-
-}
+value class ConvertSquare(val num: Int)
 
 fun main() {
     val studentName = NameOfStudent("Darshan")

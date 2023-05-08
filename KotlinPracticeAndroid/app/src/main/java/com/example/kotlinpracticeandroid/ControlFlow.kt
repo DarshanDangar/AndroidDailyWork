@@ -1,57 +1,50 @@
 package com.example.kotlinpracticeandroid
 
-// Control flow
-
-// if expression
-
-var number = 5
-var digit = 6
+val number = 5
+val digit = 6
 var max = 0
 
+val otherNumber: Int = 8
+val maximum = if (number > digit) number
+else if (digit > otherNumber) digit else otherNumber
 
-var othernumber: Int = 8
-var maximum = if (number > digit)
-    number
-else if (digit > othernumber) digit else othernumber
-
-// when expression
-
-var ageofPerson = 55
-var resultPerson = when(ageofPerson) {
+val ageOfPerson = 55
+val resultPerson = when (ageOfPerson) {
     in 19..100 -> println("You are eligible for voting")
     in 1..18 -> println("You are not eligible for voting")
     else -> println("please enter valid digit")
 }
 
-// for loop
-
 var personArray = arrayOf("Darshan", "Shyam", "Shubham")
 
 fun main() {
+
     if (number < digit) max = digit
     println(max)
+
     max = if (number > digit) number else digit
     println(maximum)
     println(resultPerson)
 
-    for (i in personArray) {
-        println(i)
+    for (element in personArray) {
+        println(element)
     }
 
-    for (i in 1..5) {
-        println(i)
+    for (element in 1..5) {
+        println(element)
     }
 
-    for (i in 6 downTo 0 step 4) {
-        println(i)
+    for (element in 6 downTo 0 step 4) {
+        println(element)
     }
 
-    for (i in 1 until 10 step 3) {
-        println(i)
+    for (element in 1 until 10 step 3) {
+        println(element)
     }
 
-    for (i in (0..4).reversed()) {
-        println(i)
+    for (element in (0..4).reversed()) {
+        println(element)
     }
+
 }
 

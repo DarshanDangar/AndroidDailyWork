@@ -1,42 +1,30 @@
 package com.example.kotlinpracticeandroid
 
+class Health(val name: String,private var isWell: Boolean) {
 
-
-class Health(val name: String, var isWell: Boolean) {
-    //var isHealthy = isHealth
     fun isWell() {
         if (!isWell) {
             println("$name is not fine")
             return
+        } else {
+            println("$name is fine")
         }
-        println("$name is fine")
     }
 
     var fever: Boolean = false
-//    val fever: Boolean by Delegates.observable(false) {
-//            _, oldValue, newValue ->  if (newValue) println("person has fever") else println("person is healthy")
-//    }
 }
 
 fun Health.type() {
     println("Extension function use")
 
     fun isFever() {
-        if (fever) println("Please take rest and take Azithromicine, paracitamol") else println("Don't worry")
+        if (fever) println("Please take rest and take Azithromicine, paracetamol") else println("Don't worry")
     }
 }
 
-//open class Cart
-//class Convertible: Cart()
-//
-//// defining the getType() extensions function on Car
-//fun Cart.getType() = "Generic car"
-//// defining the getType() extensions function on Convertible
-////fun Convertible.getType() = "Convertible car"
-
 open class BaseClass
 
-class Derivedclass : BaseClass() {
+class DerivedClass : BaseClass() {
     var classDe: String = ""
 }
 
@@ -44,7 +32,7 @@ fun BaseClass.isReady() {
     println("Base class extension function use")
 }
 
-fun Derivedclass.isReady() {
+fun DerivedClass.isReady() {
     println("Derived class extension function use")
 }
 
@@ -52,7 +40,7 @@ fun Any?.toString(): String {
     if (this == null) {
         return ""
     }
-    return toString()
+    return this.toString()
 }
 
 fun String.chara(): Char {
@@ -63,7 +51,7 @@ interface ExtensionFunction {
     fun uses()
 }
 
-fun ExtensionFunction.randon() {
+fun ExtensionFunction.random() {
     fun uses() {
         println("Interface extension function use")
     }
@@ -71,14 +59,12 @@ fun ExtensionFunction.randon() {
 
 class UseInterfaceExtension : ExtensionFunction {
     override fun uses() {
-
+        println("uses method use")
     }
 }
 
 class UseCompanionObj {
-    companion object Name {
-
-    }
+    companion object Name
 }
 
 fun UseCompanionObj.Name.add() {
@@ -92,27 +78,38 @@ class ExtOne {
 
     class ExtTwo {
         fun ExtOne.extTwo() {
-            println("Ext two use in extone extension")
+            println("Ext two use in extOne extension")
         }
     }
 }
 
+class AddString {
+    val add: String = "Hello"
+}
+
+fun AddString.addString(str: String) {
+        println("$add $str")
+}
+
 fun main() {
 
+    val stringConcatenation = AddString()
+    stringConcatenation.addString("Darshan")
+
     val extOne = ExtOne.ExtTwo()
+    println(extOne)
 
     println("Darshan".chara())
-    val useCompobj = UseCompanionObj.add()
+    val useCompObj = UseCompanionObj.add()
+    println(useCompObj)
 
     val ans = 89658656.toString()
     println(ans)
-    val derived = Derivedclass().isReady()
+    val derived = DerivedClass().isReady()
     println(derived)
 
     val health = Health("Darshan", true)
     health.isWell()
     health.type()
 
-//    var convertible = Convertible()
-//    convertible.getType()
 }

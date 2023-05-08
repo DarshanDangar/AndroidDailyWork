@@ -4,15 +4,17 @@ interface NotificationManager {
     fun sendNotification()
 }
 
-class NotificationManagerImpl: NotificationManager {
+class NotificationManagerImpl : NotificationManager {
     override fun sendNotification() {
         println("Notified")
     }
 }
 
-class Samsung(private val notificationManager: NotificationManager): NotificationManager by notificationManager
+class Samsung(private val notificationManager: NotificationManager) :
+    NotificationManager by notificationManager
 
-class Oneplus(private val notificationManager: NotificationManager): NotificationManager by notificationManager
+class Oneplus(private val notificationManager: NotificationManager) :
+    NotificationManager by notificationManager
 
 fun main() {
     val notificationManager = NotificationManagerImpl()
