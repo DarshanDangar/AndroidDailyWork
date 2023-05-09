@@ -1,7 +1,5 @@
 package com.example.kotlinpracticeandroid
 
-// Higher order function
-
 fun person(greeting: () -> Unit) {
     greeting()
 }
@@ -12,12 +10,9 @@ fun name() {
 
 data class DetailsOfName(val name: String, var age: Int)
 
-// reference function (callable func)
-
 fun isOdd(x: Int) = x % 2 != 0
 
 fun compare(a: String, b: String) = a.length < b.length
-
 
 fun main() {
     println(compare("Darshan", "DangarDar"))
@@ -36,7 +31,7 @@ fun main() {
     println(lam(5, 6))
     val productResult = product(5, 4)
     println(productResult)
-    person({ println("Good Morning") })
+    person { println("Good Morning") }
 
     val people = listOf(
         DetailsOfName("Darshan", 21),
@@ -48,7 +43,7 @@ fun main() {
 
     val resultMaxAge = people
         .filter { it.name.startsWith('S') }
-        .maxBy({ it.age })
+        .maxBy { it.age }
     println(resultMaxAge)
     println(resultMaxAge.age)
     println(resultMaxAge.name)

@@ -1,5 +1,3 @@
-@file:Suppress("UNUSED_EXPRESSION")
-
 package com.example.kotlinpracticeandroid
 
 var address: List<String?>? = listOf()
@@ -10,38 +8,41 @@ data class Member(var name: String, var age: Int, var address: String) {
     }
 }
 
+class DataInDatabase(var name: String, var size: Int) {
+    fun detail() {
+        println("Details")
+    }
+}
+
+class DepartmentOf(val name: String, private val work: String?) {
+    fun data() {
+        println("$name $work")
+    }
+}
+
 fun main() {
     val nameOfPerson = "Darshan"
-//    val d = nameOfPerson.run {
-//        println("Length of string using run:$this, ${this.length}")
-//        "Shubham"
-//        println("HIU")
-//    }
-//    println(nameOfPerson)
-//    println(d)
 
     nameOfPerson.map {
         println(it)
     }
 
     val numArr = arrayOf(5, 10, 15, 21, 25, 1, 2, 3, 8)
-    numArr.map { it > 10
-    println(it)
+    numArr.map {
+        it > 10
+        println(it)
     }
 
-    val nameList = listOf("DarshAn", "ShyAm", "ShubHam", "Ram", "Raj", "Om")
+    val nameList = listOf("Darshan", "Shyam", "Shubham", "Ram", "Raj", "Om")
     nameList.filter { it.length > 3 }
         .also { println(it) }
-    nameList.first().let {
-        println(it.uppercase())
+    println(nameList.first().uppercase())
+    val nameL = nameList.map {
+        //val x = it.first().lowercase()
+        it.replace(it.first().toString(), it.first().lowercase())
+        //it.lowercase()
     }
-   val nameL = nameList.map {
-       //val x = it.first().lowercase()
-       it.replace(it.first().toString(), it.first().lowercase())
-       //it.lowercase()
-   }
     println(nameL)
-
 
 //    nameOfPerson.let {
 //        println("Length of String using let: ${it.length}, $it!!")
@@ -62,20 +63,14 @@ fun main() {
     }
     println(airportName)
 
-    // let
-
     address?.let {
         //println(it.dropLast(2))
-        println( it.filterNotNull() )
+        println(it.filterNotNull())
     }
-
-    // apply
 
     address?.apply {
         println(this.filterNotNull())
     }
-
-    //
 
     val member = Member("Darshan", 21, "Rajkot").apply {
         add()
@@ -83,9 +78,8 @@ fun main() {
 
     val valueLet = member.let {
         println(it)
-        //add()
         it.add()
-        it.age // return
+        age
     }
 
     println(valueLet)
@@ -94,7 +88,6 @@ fun main() {
         println(this)
         add()
         this.address
-        // valueApply type is data class
     }
 
     println(valueApply)
@@ -102,12 +95,10 @@ fun main() {
     val valueWith = with(member) {
         age = 22
         println(this)
-        this.address // return
+        this.address
     }
 
     println(valueWith)
-
-    // run (combination of let and with)
 
     val valueRun = member.run {
         println(this.age)
@@ -128,9 +119,8 @@ fun main() {
         it.age = 20
         it.address = "Ahmedabad"
         println(it)
-
     }
-        // also and apply does not any return value because its return type Unit
+    // also and apply does not any return value because its return type Unit
 
     val randomNumber = 50.1
     println(randomNumber)
@@ -138,10 +128,10 @@ fun main() {
     val numberEven = randomNumber.takeIf {
         it.toInt() % 2 == 0
     }
-    println(numberEven) // condition statisfy then return object otherwise return null
+    println(numberEven) // condition satisfy then return object otherwise return null
 
     val numberOdd = randomNumber.takeUnless {
-        it.toInt() % 2 != 0 // comdition statisfy then return null otherwise return object
+        it.toInt() % 2 != 0 // condition satisfy then return null otherwise return object
     }
     println(numberOdd)
     val strString = "Dangar Darshan"
@@ -149,7 +139,61 @@ fun main() {
     val substring = strString.substring(range)
     val sub = strString.subSequence(range)
     println(sub)
-
     println(substring)
 
+    val database = DataInDatabase("MusicData", 5).apply {
+        size *= 5
+    }
+    println(database.size)
+    println(database.name)
+    with(database) {
+        size = 50
+        println(size)
+    }
+    println(database.size)
+
+    DataInDatabase("VideoPlayer", 10).apply {
+        this.detail()
+        name = name.uppercase()
+        println(name)
+    }
+
+    DataInDatabase("MxPlayer", 15).run {
+        this.detail()
+        name
+    }
+
+    DataInDatabase("Movie", 8).also {
+        it.detail()
+        it.size
+    }
+
+    val dataOfImage: DataInDatabase? = null
+
+    dataOfImage?.run {
+        println()
+        println("run apply on nullable")
+        this.detail()
+    }
+
+    dataOfImage?.apply {
+        println()
+        println("apply on nullable")
+        this.detail()
+    }
+
+    dataOfImage?.also {
+        it.detail()
+    }
+
+    DepartmentOf("Computer Engineer", "Make Software").apply {
+        println(name)
+        data()
+    }
+
+    val removeNull = listOf(1, null, 2, null)
+    println(removeNull.filterNotNull())
+    println(removeNull.filterNot {
+        it == null
+    })
 }

@@ -1,17 +1,14 @@
 package com.example.kotlinpracticeandroid
 
 enum class Direction {
-    North,
-    South,
-    East,
-    West
+
+    North, South, East, West
+
 }
 
 enum class NumberOfVehicle(val no: String) {
 
-    Bike(no = "GJ03XXXX"),
-    Car(no = "GJ05XXXX"),
-    Truck(no = "Gj01XXXX")
+    Bike(no = "GJ03XXXX"), Car(no = "GJ05XXXX"), Truck(no = "Gj01XXXX")
 
 }
 
@@ -20,22 +17,13 @@ var bikeNumber = NumberOfVehicle.Bike.no
 
 enum class Cards(val color: String) {
 
-    Diamond("red"),
-    Heart("red"),
-    Spades("black"),
-    Club("black")
+    Diamond("red"), Heart("red"), Spades("black"), Club("black")
 
 }
 
 enum class Days(val no: Int) {
 
-    Monday(1),
-    Tuesday(2),
-    Wednesday(3),
-    Thursday(4),
-    Friday(5),
-    Saturday(6),
-    Sunday(7)
+    Monday(1), Tuesday(2), Wednesday(3), Thursday(4), Friday(5), Saturday(6), Sunday(7)
 
 }
 
@@ -61,9 +49,6 @@ enum class Season(private val effect: String) {
 
 }
 
-@JvmInline
-value class Adding(val name: String)
-
 //enum class DayOfWeek(val displayName: String) {
 //    SUNDAY("Sunday"), // ordinal = 0
 //    MONDAY("Monday"), // ordinal = 1
@@ -76,16 +61,14 @@ value class Adding(val name: String)
 
 fun main() {
 
-    val adding = Adding("Darshan")
     val day = Days.Monday
-    val t = when(Days.Monday.no) {
+    val t = when (Days.Monday.no) {
         1 -> println("Never")
         2 -> println("Used")
         else -> println("d")
     }
     println(t)
     println(day.ordinal)
-    println(adding)
     println(numberOfVehicle)
     val color = Cards.Diamond.color
     println(bikeNumber)

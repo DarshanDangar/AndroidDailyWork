@@ -7,10 +7,13 @@ open class Animal(val name: String, val type: String, val life: Int, var color: 
     open fun type() {
         println("Animal type is: $type")
     }
+
 }
 
 open class Dog : Animal("Dog", "pet", 5, "White") {
+
     val nikName: String = "Tommy"
+
 }
 
 class Horse(name: String, type: String, life: Int, color: String) :
@@ -21,21 +24,7 @@ class Horse(name: String, type: String, life: Int, color: String) :
         println("Sec called")
     }
 
-    override fun type() {
-        super.type()
-    }
-
 }
-
-// class Horse: Animal {
-//    constructor(color: String): this("Bavli", "Marwadi", 30, color) {
-//        this.color = color
-//        println("Sec called")
-//    }
-//    constructor(name: String, type: String, life: Int, color: String): super(name = name, type = "", life = 0, color = ""){
-//    }
-//
-//}
 
 // multilevel inheritance
 
@@ -44,21 +33,27 @@ class Puppy : Dog()
 class CheckConstructor(val assign: Int)
 
 open class Base {
+
     init {
         println("This is base class")
     }
+
 }
 
 open class Child : Base() {
+
     init {
         println("This is child class")
     }
+
 }
 
 class GrandChild : Child() {
+
     init {
         println("This is grand Child class")
     }
+
 }
 
 
@@ -86,5 +81,8 @@ fun main() {
     println(chetak.type)
     println(chetak.color)
     chetak.type()
+
+    val tommy = Animal(color = "White")
+    println(tommy.color)
 
 }

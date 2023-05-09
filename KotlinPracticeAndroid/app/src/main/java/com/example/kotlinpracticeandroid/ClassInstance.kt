@@ -34,7 +34,6 @@ private var privateProperty = 500
 internal var internalProperty = 5000
 
 fun main() {
-
     val area = Area(5)
     area.printArea()
     println(area.max(10,12))
@@ -48,5 +47,4 @@ fun main() {
     }
 
     println(privateProperty)
-
 }

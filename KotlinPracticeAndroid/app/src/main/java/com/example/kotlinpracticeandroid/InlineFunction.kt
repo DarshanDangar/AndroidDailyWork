@@ -18,16 +18,21 @@ inline fun isBusy(available: () -> Unit, crossinline busy: () -> Unit) {
 
 }
 
-    var x
-        inline get() = 5
-        set(value){
-            x = value
-        }
+var x
+    inline get() = 5
+    set(value) {
+        x = value
+    }
 
-
+inline fun ad(num: Int, lm: (Int) -> Unit) {
+    lm(num)
+}
 
 fun main() {
-    isSmartphone ({ println("smartphone") }, { println("lmbdas") })
+    ad(5) {
+        println(it)
+    }
+    isSmartphone({ println("smartphone") }, { println("Lambdas") })
     isComplete({ println("Work is complete") }, { println("Work is not complete") })
     isBusy({
         println("Available")

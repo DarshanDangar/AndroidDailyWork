@@ -1,10 +1,11 @@
 package com.example.kotlinpracticeandroid
 
-class Health(val name: String,private var isWell: Boolean) {
+class Health(val name: String, private var isWell: Boolean) {
 
     fun isWell() {
         if (!isWell) {
             println("$name is not fine")
+            fever = true
             return
         } else {
             println("$name is fine")
@@ -15,10 +16,8 @@ class Health(val name: String,private var isWell: Boolean) {
 }
 
 fun Health.type() {
-    println("Extension function use")
-
     fun isFever() {
-        if (fever) println("Please take rest and take Azithromicine, paracetamol") else println("Don't worry")
+        if (fever) println("Please take rest and take Azithromicine, paracetamol") else println("Don't worry you are Healthy")
     }
 }
 
@@ -30,10 +29,6 @@ class DerivedClass : BaseClass() {
 
 fun BaseClass.isReady() {
     println("Base class extension function use")
-}
-
-fun DerivedClass.isReady() {
-    println("Derived class extension function use")
 }
 
 fun Any?.toString(): String {
@@ -58,13 +53,17 @@ fun ExtensionFunction.random() {
 }
 
 class UseInterfaceExtension : ExtensionFunction {
+
     override fun uses() {
         println("uses method use")
     }
+
 }
 
 class UseCompanionObj {
+
     companion object Name
+
 }
 
 fun UseCompanionObj.Name.add() {
@@ -72,26 +71,41 @@ fun UseCompanionObj.Name.add() {
 }
 
 class ExtOne {
+
     fun extOne() {
         println("ExtOne uses")
     }
 
     class ExtTwo {
+
         fun ExtOne.extTwo() {
             println("Ext two use in extOne extension")
         }
+
     }
+
 }
 
 class AddString {
+
     val add: String = "Hello"
+
 }
 
 fun AddString.addString(str: String) {
-        println("$add $str")
+    println("$add $str")
+}
+
+object Missile
+
+fun Missile.launchMissile() {
+    println("Missile Launching...")
 }
 
 fun main() {
+
+    val missile = Missile
+    missile.launchMissile()
 
     val stringConcatenation = AddString()
     stringConcatenation.addString("Darshan")
@@ -105,7 +119,8 @@ fun main() {
 
     val ans = 89658656.toString()
     println(ans)
-    val derived = DerivedClass().isReady()
+    val derived = DerivedClass()
+    derived.isReady()
     println(derived)
 
     val health = Health("Darshan", true)

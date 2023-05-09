@@ -20,12 +20,12 @@ val numBuilder = buildMap {
     put("Aut", 3)
 }
 
-val setBuilder = buildSet<Int> {
+val setBuilder = buildSet {
     add(5)
     add(6)
 }
 
-val listBuilder = buildList<Int> {
+val listBuilder = buildList {
     add(10)
     add(12)
     add(15)
@@ -39,8 +39,11 @@ val emptySet = emptySet<Any>()
 
 val emptyMap = emptyMap<Int, String>()
 
-val initLists = List(10, { it * 3 })
+val initLists = List(10) { it * 3 }
 
+val set = setOf(1, 2, 3, 4, 11, 6, 7, 8, 9, 0)
+
+val listOfNumber = listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9))
 
 fun main() {
     println(initLists)
@@ -69,7 +72,7 @@ fun main() {
     println(mutableIterator)
     println(numberList)
 
-    val evenNumber = generateSequence(1) { it * 2 }
+    val evenNumber = generateSequence(1) { it + 2 }
     println(evenNumber.take(200).toList())
     println(evenNumber.take(10).toList())
 
@@ -80,7 +83,6 @@ fun main() {
         yield(5)
         yieldAll(listOf(8, 10, 12))
         yieldAll(generateSequence(20) { it + 1 })
-
     }
     println(numberListChunk.take(20).toList())
 
@@ -91,7 +93,9 @@ fun main() {
         .take(3)
     println(sequenceSentenceLengthGraterthan5.toList())
 
-    println(numberSet.filter { it > 5; }
+    println(numberSet.filter {
+        it > 5
+    }
         .map { println(it); it }
         .take(3)
     )
@@ -111,16 +115,15 @@ fun main() {
     println(numMap.map { it - 10 })
     println(numMap.map { it.times(3) })
     println(numMap.map { it.downTo(1) }) //meaning
-    println(numMap.mapIndexed { index, i -> index * 2 })
+    println(numMap.mapIndexed { index, _ -> index * 2 })
 
     //zip
 
-    val animalList = listOf("Lion", "Horse", "Dog")
+    val animalList = listOf("Lion", "Horse", "Dog", "Cow")
     val animalColor = listOf("Orange", "White", "Red")
     val animal = animalList zip animalColor
     //val animal = animalList.zip(animalColor)
     println()
-    println(animal)
     println(animal)
     println(animalList.zip(animalColor) { animalList, animalColor -> "$animalList color is: $animalColor" })
 
@@ -204,6 +207,75 @@ fun main() {
     for (i in detailsPersonMap) {
         println(i)
     }
+
+    val mapOfSet = set.map {
+        it * 2
+    }
+    println(mapOfSet)
+    val setFilter = set.filter {
+        it > 5
+    }
+    println(setFilter)
+    val setForEach = set.forEach {
+        it > 5
+    }
+    println(setForEach)
+    val setAny = set.any {
+        it > 5
+    }
+    println(setAny)
+    val setLast = set.last {
+        it > 8
+    }
+    println(setLast)
+    val setDropWhile = set.dropWhile {
+        it > 5
+    }
+    println(setDropWhile)
+    val setFind = set.find {
+        it > 5
+    }
+    println(setFind)
+    val setFirst = set.first {
+        it > 3
+    }
+    println(setFirst)
+    val indexOfFirst = set.indexOfFirst {
+        it > 2
+    }
+    println(indexOfFirst)
+    val indexOfLast = set.indexOfLast {
+        it > 8
+    }
+    println(indexOfLast)
+    val reduce = set.reduce { acc, i -> acc + i }
+    println(reduce)
+    val fold = set.fold(1) { initial, multiply ->
+        initial * multiply
+    }
+    println(fold)
+    val associateBy = set.associateBy(keySelector = { it }, valueTransform = { it * 2 })
+    println(associateBy)
+    val associateWith = set.associateWith {
+        it * 5
+    }
+    println(associateWith)
+    val count = set.count {
+        it > 1
+    }
+    println(count)
+    val flatmap = listOfNumber.flatMap {
+        it.toList()
+    }
+    println(flatmap)
+
+    val stringList = listOf("Darshan", "Shyam", "Shubham", "Sagar", "Rajan", "Krunal")
+
+    val surnameList = listOf("Dangar", "Buhecha", "Bhatt", "Ajudiya", "Patel", "Patel")
+
+    println(stringList.joinToString())
+
+    println(stringList.zip(surnameList))
 
 }
 

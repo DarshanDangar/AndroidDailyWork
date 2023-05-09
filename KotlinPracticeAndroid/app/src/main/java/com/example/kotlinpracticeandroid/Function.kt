@@ -10,15 +10,15 @@ fun voting(name: String, age: Int, address: String, available: Boolean) {
 }
 
 fun isOpen(name: String = "", available: Boolean) {
-    if (available == true) {
+    if (available) {
         println("$name is available")
     }
 }
 
-open class  Amc {
+open class Amc {
 
     open fun isOpen(open: Boolean = true) {
-        if (open == true) {
+        if (open) {
             println("Amc is open")
         } else {
             println("Amc is closed")
@@ -27,19 +27,19 @@ open class  Amc {
 
 }
 
-class Amts: Amc() {
+class Amts : Amc() {
 
     override fun isOpen(open: Boolean) {
-        if (open == true) {
-            println("Amc is open")
+        if (open) {
+            println("Amts is running")
         } else {
-            println("Amc is closed")
+            println("Amts is not running today")
         }
     }
 
 }
 
-fun cube(num: Int): Unit {
+fun cube(num: Int) {
     println(num * num * num)
 }
 
@@ -50,7 +50,7 @@ fun isBusy() = println("Yes, this man busy")
 fun area(num: Int) = num *
         3.14 * num
 
-val voter = voting("Darshan",21, "Mota Dadva", true)
+val voter = voting("Darshan", 21, "Mota Dadva", true)
 
 fun varargs(vararg num: Int): IntArray {
     return num
@@ -66,14 +66,14 @@ fun mrp() {
     var wetTex: Int = 0
     fun price() {
         wetTex = 15
-        var price = 500
+        val price = 500
         println("price: $price")
     }
-    //price()
+
     fun tax() {
         println("tex is depend type of product")
     }
-    //tax()
+
 }
 
 // member function is fun is in a class or object
@@ -86,34 +86,24 @@ class CyberCrime {
 
 // generic function
 
-fun <T>generic(value: T): T {
-    return  value
+fun <T> generic(value: T): T {
+    return value
 }
 
 // tail recursion
 
-tailrec fun facttail(num: Int, product: Int): Int {
+tailrec fun factTail(num: Int, product: Int): Int {
     return if (num == 1)
         product
     else
-        facttail(num - 1, product * num)
+        factTail(num - 1, product * num)
 }
 
-//tailrec fun sumArray(num: Array<Int>, sum: Int = 0): Int{
-//        for (i in num) {
-//            if (i >= 0) {
-//                sumArray(num,num[i] + sum)
-//            }
-//            return sum
-//    }
-//    return sum
-//}
-
 fun main() {
-    val arrayOfInt = arrayOf(5,4,6,3,2,1)
+    val arrayOfInt = arrayOf(5, 4, 6, 3, 2, 1)
 //    val sumArray = sumArray(arrayOfInt)
 //    println(sumArray)
-    val resfact = facttail(5,1)
+    val resfact = factTail(5, 1)
     println(resfact)
 //    CyberCrime().crimeRate(15.5)
 //    mrp()

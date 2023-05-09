@@ -94,7 +94,6 @@ class Details {
 }
 
 fun main() {
-
     testType(5.0)
     testType(8.0)
     println(isName && isId)
@@ -122,7 +121,6 @@ fun main() {
     println(newCharacter)
     println(array)
     println(studentMech)
-
 }
 
 

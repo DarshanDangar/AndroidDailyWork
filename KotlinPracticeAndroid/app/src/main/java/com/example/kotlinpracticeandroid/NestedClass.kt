@@ -1,10 +1,13 @@
 package com.example.kotlinpracticeandroid
- class TransportVehicle {
-    val numberMem = 50
+
+open class TransportVehicle {
+
+    val capicityOfVehicle = 50
+
     inner class Bus {
         fun busAvailable() {
             println("Yes, Bus is available")
-            println(numberMem)
+            println(capicityOfVehicle)
         }
     }
 
@@ -14,30 +17,28 @@ package com.example.kotlinpracticeandroid
         }
     }
 
-    class VolvoBus: Volvo() {
+    open class VolvoBus : Volvo()
 
-    }
+    data class Gsrtc(val name: String, val root: String)
 
-   data class Gsrtc(val name: String, val root: String)
-
-    interface Maintainance {
+    interface Maintenance {
         fun isNeed()
         fun condition()
     }
 
     private class MemberBus {
         fun isMember() {
-            println("private member calles")
+            println("private member called")
         }
     }
 
-    class Midibus: Maintainance {
+    open class Midibus : Maintenance {
         override fun condition() {
             println("midibus condition is very bad")
         }
 
         override fun isNeed() {
-            println("Yes midibus must need meantainance")
+            println("Yes midibus must need maintenance")
         }
     }
 
@@ -45,19 +46,14 @@ package com.example.kotlinpracticeandroid
         Monday
     }
 
-    abstract class Tyoe {
-
-    }
+    abstract class Type
 
     @JvmInline
-    value class HJUv(val name: String) {
-
-    }
+    value class HJUv(val name: String)
 
 }
 
 fun main() {
-
     val bus = TransportVehicle().Bus()
     bus.busAvailable()
     val volvo = TransportVehicle.VolvoBus() // sealed class
@@ -67,5 +63,4 @@ fun main() {
     val midibus = TransportVehicle.Midibus()
     midibus.isNeed()
     midibus.condition()
-
 }
