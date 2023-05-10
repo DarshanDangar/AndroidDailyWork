@@ -2,15 +2,15 @@ package com.example.kotlinpracticeandroid
 
 object Tv {
 
-    fun printTv() {
-        println("Object Tv called")
+    fun details() {
+        println("This tv has 32 inches as screen size")
     }
 
 }
 
 object Refrigerator {
 
-    fun printRef() {
+    fun details() {
         println("Object RefrigReator called")
     }
 
@@ -19,9 +19,13 @@ object Refrigerator {
 // Anonymous object
 
 interface Brts {
+
     fun root()
+
     fun isElectric()
+
     fun price()
+
 }
 
 class AnonymousObject {
@@ -29,11 +33,11 @@ class AnonymousObject {
         val obj: String = "Object"
     }
 
-    companion object {}
+    companion object {
+        var balance: Int = 0
+    }
 
 }
-
-// sealed class inherit
 
 sealed class FileAction
 
@@ -43,16 +47,14 @@ data class Close(val action: String) : FileAction()
 
 fun checked(check: FileAction) {
     when (check) {
-        is Open -> println("This is simople class")
+        is Open -> println("This is simple class")
         is Close -> println("This is data class")
     }
 }
 
-// companion object
-
 class Companion {
 
-    companion object C {
+    companion object Check {
         private fun check() {
             println("called companion object")
 
@@ -60,7 +62,7 @@ class Companion {
 
     }
 
-    object Check {
+    object CheckObject {
         fun objCheck() {
             check()
             println("object called in class")
@@ -68,12 +70,6 @@ class Companion {
     }
 
 }
-
-class TypeAliasChecked {
-    var ghj = 55
-}
-
-typealias asd = TypeAliasChecked
 
 fun main() {
 
@@ -93,7 +89,7 @@ fun main() {
         }
 
         override fun isElectric() {
-            println("Yes, This bus is electrick")
+            println("Yes, This bus is electric")
         }
     }
 
@@ -101,8 +97,8 @@ fun main() {
     result.isElectric()
     result.price()
 
-    Tv.printTv()
-    Refrigerator.printRef()
+    Tv.details()
+    Refrigerator.details()
 
     val likes = object {
 

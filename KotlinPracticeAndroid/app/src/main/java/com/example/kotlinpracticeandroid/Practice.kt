@@ -6,7 +6,7 @@ class Practice {
         private set
 
     fun details() {
-        name = "nkn"
+        name = "$name Dangar"
     }
 
 }
@@ -20,6 +20,7 @@ open class SystemPc(val name: String, private val price: Int) {
     fun detail() {
         println("name is: $name and its price is $price")
     }
+
 }
 
 class Laptop(name: String, price: Int, val weight: Int) : SystemPc(name, price) {
@@ -87,7 +88,6 @@ fun main() {
     }
 
     val pr = Practice()
-    //pr.name = "Darshan"
     println(pr.name)
     val laptop = Laptop("Dell", 50000, 1, true)
     laptop.detail()
@@ -162,7 +162,7 @@ fun main() {
             valueTransform = { it })
     )
 
-    val numList = listOf(1,2,3,4,5,6)
+    val numList = listOf(1, 2, 3, 4, 5, 6)
     val d = numList.filter {
         it > 4
     }
@@ -172,8 +172,9 @@ fun main() {
         .take(2)
     println()
 
-    val numListSequence = sequenceOf(1,2,3,4,5,6)
-    val dd = numList.filter { it > 4
+    val numListSequence = sequenceOf(1, 2, 3, 4, 5, 6)
+    val dd = numList.filter {
+        it > 4
     }
         .map {
             println(it)

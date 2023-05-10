@@ -1,13 +1,11 @@
 package com.example.kotlinpracticeandroid
 
-// Properties
-
 var emptyProperty: String = ""
-val intNumber = 5;
+const val intNumber = 5;
 class Address {
 
     var address: String = "MD"
-    var city: String = "Rjkt"
+    var city: String = "Rajkot"
     var street: String = "KR"
     var zipcode: String = "360331"
 
@@ -18,18 +16,16 @@ class Address {
     }
 }
 
-fun deatls(address: Address): Address{
-
+fun detailsOfAddress(address: Address): Address{
     val result = Address()
     result.address = address.address
     result.city = address.city
     result.street = address.street
     result.zipcode = address.zipcode
-
     return result
 }
 
-class Square(var side: Int) {
+class Square(private var side: Int) {
 
     private var extra = 0
     var area: Int
@@ -38,20 +34,17 @@ class Square(var side: Int) {
         } set(value) {
             extra = value
         }
-    val areaofSquare get() = side * side * side
+    val areaOfSquare get() = side * side * side
     var rectArea: Int
     get() {
         return area
     } set(value) {
-        area = areaofSquare
+        area = areaOfSquare
     }
-
-//    val isEmpty: Boolean
-//        get() = this.size == 0
 
 }
 
-class GetSet {
+class Radius {
 
     var radius: Int = 0
         set(value) {
@@ -64,14 +57,11 @@ class GetSet {
 
 class PrivateSet {
     var hd: Int = 0
-    set(value) {
-        field = value
-    }
 }
 
 fun main() {
     val address = Address()
-    val details = deatls(address)
+    val details = detailsOfAddress(address)
     println(details.city)
     println(details.address)
     println(details.zipcode)
@@ -80,14 +70,14 @@ fun main() {
 
     val squareArea = Square(5)
     println(squareArea.area)
-    println(squareArea.areaofSquare)
+    println(squareArea.areaOfSquare)
     println(squareArea.rectArea)
     squareArea.rectArea = 5
     println(squareArea.area)
 
-    val getset = GetSet()
-    getset.radius = 12
-    println(getset.radius)
+    val getSet = Radius()
+    getSet.radius = 12
+    println(getSet.radius)
 
     val privateSet = PrivateSet()
     privateSet.hd = 100
