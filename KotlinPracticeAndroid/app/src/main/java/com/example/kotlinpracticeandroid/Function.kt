@@ -101,46 +101,40 @@ tailrec fun factTail(num: Int, product: Int): Int {
 
 fun main() {
     val arrayOfInt = arrayOf(5, 4, 6, 3, 2, 1)
-//    val sumArray = sumArray(arrayOfInt)
-//    println(sumArray)
-    val resfact = factTail(5, 1)
-    println(resfact)
-//    CyberCrime().crimeRate(15.5)
-//    mrp()
-//    val amts = Amts()
-//    var typeChecking = amts.isOpen()
-//    if (typeChecking is Unit) {
-//        println(typeChecking)
-//    }
-//    greeting("Darshan")
-//    println(voter)
-//    isOpen( available = true, name = "Shyam")
-//    val cube = cube(3)
-//    println(cube)
-//    println(square(4))
-//    isBusy()
-//    println(area(5))
-//    val area = area(6)
-//    if (area is Double) {
-//        println("Area is double type")
-//    }
-//
-//    var d: Array<Int> = arrayOf(9,8,7)
-//    var resultVararg = varargs(5,4,6,8,2,4)
-//    for (i in resultVararg) {
-//        println(i)
-//    }
-//
-//    val myName: String by lazy {
-//        "Darshan"
-//    }
-//    println(myName)
-//
-//    var generic: Any = generic(5)
-//    println(generic)
-//    generic = generic("Darshan")
-//    println(generic)
-//    //generic = generic(50)
-//    print(generic)
+    val resFact = factTail(5, 1)
+    println(resFact)
+    CyberCrime().crimeRate(15.5)
+    mrp()
+    val amts = Amts()
+    val typeChecking = amts.isOpen()
+    if (typeChecking is Unit) {
+        println(typeChecking)
+    }
+    greeting("Darshan")
+    println(voter)
+    isOpen(available = true, name = "Shyam")
+    val cube = cube(3)
+    println(cube)
+    println(square(4))
+    isBusy()
+    println(area(5))
+    val area = area(6)
+    if (area is Double) {
+        println("Area is double type")
+    }
+    var d: Array<Int> = arrayOf(9, 8, 7)
+    val resultVararg = varargs(5, 4, 6, 8, 2, 4)
+    for (i in resultVararg) {
+        println(i)
+    }
+    val myName: String by lazy {
+        "Darshan"
+    }
+    println(myName)
+    var generic: Any = generic(5)
+    println(generic)
+    generic = generic("Darshan")
+    println(generic)
+    print(generic)
 
 }

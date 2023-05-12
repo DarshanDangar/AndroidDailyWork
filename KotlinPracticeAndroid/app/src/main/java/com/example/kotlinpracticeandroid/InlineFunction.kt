@@ -6,6 +6,16 @@ inline fun isSmartphone(function: () -> Unit, lmb: () -> Unit) {
     lmb()
 }
 
+open class HJKL {}
+
+fun HJKL.add() {
+    println("Added.....")
+}
+
+class JK: HJKL() {
+
+}
+
 inline fun isComplete(complete: () -> Unit, noinline notComplete: () -> Unit) {
     complete()
     notComplete()
@@ -29,6 +39,8 @@ inline fun ad(num: Int, lm: (Int) -> Unit) {
 }
 
 fun main() {
+    val jk = JK()
+    jk.add()
     ad(5) {
         println(it)
     }

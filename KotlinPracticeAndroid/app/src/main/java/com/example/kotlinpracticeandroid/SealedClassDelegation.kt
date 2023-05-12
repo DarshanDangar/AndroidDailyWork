@@ -15,11 +15,11 @@ object ShapeImpl : Shape {
     }
 }
 
-sealed class Shapes(val shape: Shape): Shape by shape
+sealed class Shapes(val shape: Shape) : Shape by shape
 
 val shapeImpl = ShapeImpl
 
-class Square2: Shapes(shapeImpl)
+class Square2 : Shapes(shapeImpl)
 
 fun main() {
     val square = Square2()

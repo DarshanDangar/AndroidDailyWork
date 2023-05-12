@@ -2,7 +2,7 @@ package com.example.kotlinpracticeandroid
 
 sealed class Demo {
 
-    class Res: Demo() {
+    class Res : Demo() {
 
         fun printRes() {
             println("Res class is called")
@@ -10,7 +10,7 @@ sealed class Demo {
 
     }
 
-    class Test: Demo() {
+    class Test : Demo() {
 
         fun printTest() {
             println("Test class is called")
@@ -33,9 +33,9 @@ sealed class Factory(name: String) {
     var factoryName = name
 }
 
-class FoodFactory: Factory("Balaji Pvt.ltd")
-class CottonFactory: Factory("MN Yearns")
-class Gidc: Factory("Gidc gate no. 2")
+class FoodFactory : Factory("Balaji Pvt.ltd")
+class CottonFactory : Factory("MN Yearns")
+class Gidc : Factory("Gidc gate no. 2")
 
 var foodFactory = FoodFactory()
 var cottonFactory = CottonFactory()
@@ -46,19 +46,19 @@ sealed interface Body {
     fun isReal()
 }
 
-sealed class BodyPart: Body {
+sealed class BodyPart : Body {
     override fun isLive() {
         println("yes it is live")
     }
 }
 
-class Xyz: BodyPart() {
+class Xyz : BodyPart() {
     override fun isReal() {
         println("xyz method use via BodyPart")
     }
 }
 
-class Head: BodyPart() {
+class Head : BodyPart() {
     override fun isReal() {
         TODO("Not yet implemented")
     }
@@ -76,17 +76,17 @@ fun main() {
     test.printTest()
 
     val age = 55
-    val result: String = when(age) {
-      in 18..60 -> "You are eligible for voting"
-      else -> "You are not eligible for voting"
+    val result: String = when (age) {
+        in 18..60 -> "You are eligible for voting"
+        else -> "You are not eligible for voting"
     }
     println(result)
 
 
 
     fun factoryType(name: Factory) {
-        when(name){
-            is FoodFactory -> println("this is food factory ${foodFactory.factoryName}" )
+        when (name) {
+            is FoodFactory -> println("this is food factory ${foodFactory.factoryName}")
             is CottonFactory -> println("this is cotton factory")
             is Gidc -> println("This is gidc")
         }

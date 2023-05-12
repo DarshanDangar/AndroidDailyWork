@@ -19,6 +19,9 @@ var charArray = charArrayOf('g', 's', 'r', 't', 'c')
 var stringArray = arrayOf("Darshan", "Shyam", "Shubham")
 
 // String
+val darshan = null
+val shubham = null
+val shyam = darshan + shubham
 
 val firstName = "Darshan"
 val lastName = "Dangar"

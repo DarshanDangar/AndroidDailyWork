@@ -28,7 +28,7 @@ class SbiBank {
     companion object AccountNo {
         var balance = 0.0
         var name = ""
-        var locorNo= 0
+        var locorNo = 0
     }
 
     object Ifsc {
