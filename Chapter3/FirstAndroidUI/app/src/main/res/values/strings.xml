@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FirstAndroidUI</string>
+    <string name="Designer">Designer</string>
+    <string name="Developer">Developer</string>
+    <string name="Administrative">Administrative</string>
+    <string name="Marketing">Marketing</string>
+    <string name="j_bseek">Jöbseek</string>
+    <string name="whichTypeOfJob">What type of job you\'re looking for?</string>
+    <string name="greeting">Welcome to OneCloud
+Sign in to get started</string>
+    <string name="anyTime">Anytime, anywhere video conferencing.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="email_hint">Enter Your Email/Username</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="forgotPassword">Forgot Password?</string>
+    <string name="signIn">Sign in</string>
+    <string name="signInOtherAccount">or sign in using other account</string>
+    <string name="profile_name">Jenny Doe (1009)</string>
+    <string name="profile_email">jenny.d@gmail.com</string>
+    <string name="logout">Log out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ic_chat">Chat</string>
+    <string name="ic_meeting">Meeting</string>
+    <string name="ic_call">Call</string>
+    <string name="ic_fax">Fax</string>
+    <string name="ic_profile">Profile</string>
+    <string name="meeting_info">All Upcoming meetings will appear here</string>
+    <string name="greeting_chat">Welcome to OneCloud</string>
+    <string name="description_chat">With unlimited voice and video calls, OneCloud is a great way to stay in touch.</string>
+    <string name="search">search</string>
+    <string name="voicemail">voicemail</string>
+    <string name="please_enter_email_and_password">please Enter Email and Password</string>
+    <string name="email_is_not_valid">email is not valid</string>
+    <string name="sign_in_clicked">sign in clicked</string>
+    <string name="login">login</string>
+    <string name="direct_message">Direct Message</string>
+    <string name="channels">Channels</string>
+    <string name="label_personal_info">Personal Info</string>
+</resources>

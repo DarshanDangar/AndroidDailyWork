@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="btntext"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.fragment.DirectMessageFragment">
+
+        <ImageView
+            android:id="@+id/img_chat_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_82"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_chat"
+            app:layout_constraintBottom_toTopOf="@+id/tv_greeting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/greeting_chat"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_chat_description"
+            app:layout_constraintEnd_toEndOf="@id/img_chat_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/img_chat_image"
+            app:layout_constraintTop_toBottomOf="@+id/img_chat_image" />
+
+        <TextView
+            android:id="@+id/tv_chat_description"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="41dp"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/description_chat"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintBottom_toTopOf="@+id/btn_create_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:backgroundTint="@color/light_blue"
+            android:text="@{btntext}"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_message_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_chat_description"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/tv_chat_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_description"
+            tools:ignore="TextContrastCheck"
+            tools:text="Start your first chat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

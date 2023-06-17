@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#17487F</color>
+    <color name="light_blue">#38A6DE</color>
+    <color name="btn_sign_in_BG">#38A6DE</color>
+    <color name="light_gray">#D5D6DC</color>
+    <color name="hint">#80474747</color>
+    <color name="inputbox_border">#80474747</color>
+    <color name="rv_call_bg">#FFF6F9FC</color>
+    <color name="seperator">#ECEEF5</color>
+    <color name="red">#FF455C</color>
+    <color name="email_text">#8083A3</color>
+    <color name="status_name">#474747</color>
+    <color name="status_description">#8083A3</color>
+    <color name="light_black">#757575</color>
+    <color name="dark_blue">#0277BD</color>
+    <color name="violet">#311B92</color>
+    <color name="light_violet">#5C6BC0</color>
+</resources>
