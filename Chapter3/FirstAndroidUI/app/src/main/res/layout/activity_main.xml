@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/j_bseek"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/jobType"
+        android:layout_marginTop="30dp"
+        android:text="@string/whichTypeOfJob"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/imgDesigner"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/img_designer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobType" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:id="@+id/txtDeveloper"
+        android:layout_marginLeft="14dp"
+        android:text="@string/Developer"
+        android:layout_marginTop="44dp"
+        app:layout_constraintLeft_toRightOf="@+id/imgDesigner"
+        app:layout_constraintStart_toEndOf="@+id/imgDesigner"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesigner"
+        app:layout_constraintWidth_percent="0.6"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/jobType"
+        app:layout_constraintStart_toEndOf="@id/txtDesigner"
+        />
+
+    <ImageView
+        android:id="@+id/imgDeveloper"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/img_developer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesigner" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:id="@+id/txtDesigner"
+        android:layout_marginLeft="14dp"
+        android:text="@string/Designer"
+        android:layout_marginTop="52dp"
+        app:layout_constraintLeft_toRightOf="@+id/imgDesigner"
+        app:layout_constraintStart_toEndOf="@+id/imgDesigner"
+        app:layout_constraintTop_toBottomOf="@+id/jobType"
+        app:layout_constraintWidth_percent="0.6"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/btnMaterial"
+        android:layout_marginTop="52dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/jobType"
+        app:layout_constraintStart_toEndOf="@id/txtDesigner"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/btnSwitch"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@id/txtDeveloper"
+        app:layout_constraintTop_toBottomOf="@id/btnMaterial"/>
+
+    <ImageView
+        android:id="@+id/imgContract"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/img_administritive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDeveloper" />
+
+    <TextView
+        android:id="@+id/txtAdministrative"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/Administrative"
+        app:layout_constraintStart_toEndOf="@+id/imgContract"
+        app:layout_constraintTop_toBottomOf="@+id/txtDeveloper"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <RadioButton
+        android:layout_width="27dp"
+        android:layout_height="23dp"
+        android:id="@+id/btnRadio"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@id/txtAdministrative"
+        app:layout_constraintTop_toBottomOf="@id/txtDeveloper" />
+
+    <ImageView
+        android:id="@+id/imgmarketing"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/img_marketing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdministrative" />
+
+    <TextView
+        android:id="@+id/txtMarketing"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/Administrative"
+        app:layout_constraintStart_toEndOf="@+id/imgmarketing"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdministrative"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <CheckBox
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/btncheckbox"
+        app:layout_constraintTop_toBottomOf="@+id/btnRadio"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@+id/txtAdministrative"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

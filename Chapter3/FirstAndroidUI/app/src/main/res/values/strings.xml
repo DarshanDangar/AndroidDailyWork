@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FirstAndroidUI</string>
+    <string name="Designer">Designer</string>
+    <string name="Developer">Developer</string>
+    <string name="Administrative">Administrative</string>
+    <string name="Marketing">Marketing</string>
+    <string name="j_bseek">Jöbseek</string>
+    <string name="whichTypeOfJob">What type of job you\'re looking for?</string>
+</resources>
