@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".SignInActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/blue"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_support"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="61dp"
+        android:src="@drawable/img_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_greeting"
+        android:layout_width="259dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/greeting"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_logo" />
+
+    <TextView
+        android:id="@+id/txt_Discription"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/anyTime"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_greeting" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="-16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_email"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtE_email"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtE_email"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="16dp"
+        android:alpha="0.5"
+        android:background="@drawable/cornerradius_strokecolor"
+        android:hint="@string/email_hint"
+        android:paddingStart="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_email" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtE_email" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtE_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="16dp"
+        android:alpha="0.5"
+        android:background="@drawable/cornerradius_strokecolor"
+        android:drawableRight="@drawable/img_hide"
+        android:hint="@string/password_hint"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/forgotPassword"
+        android:textColor="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtE_password"
+        app:layout_goneMarginTop="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signIn"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/btn_sign_in_BG"
+        android:text="@string/signIn"
+        app:cornerRadius="8dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/signInOtherAccount"
+        app:layout_constraintEnd_toStartOf="@+id/signInOtherAccount"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signInOtherAccount" />
+
+    <TextView
+        android:id="@+id/signInOtherAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/signInOtherAccount"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/signInWithGoogle"
+        app:layout_constraintEnd_toStartOf="@id/view2"
+        app:layout_constraintStart_toEndOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/signIn" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/signInOtherAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/signInOtherAccount"
+        app:layout_constraintTop_toTopOf="@id/signInOtherAccount" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signInWithGoogle"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signInWithMicrosoft"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInOtherAccount"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:id="@+id/img_signInWithGoogle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:src="@drawable/img_google" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signInWithMicrosoft"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/signInWithGoogle"
+        app:layout_constraintEnd_toStartOf="@+id/signInWithApple"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signInWithGoogle"
+        app:layout_constraintTop_toTopOf="@id/signInWithGoogle"
+        tools:ignore="MissingConstraints"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:id="@+id/img_signInWithMicrosoft"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:src="@drawable/img_microsoft" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signInWithApple"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/signInWithMicrosoft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signInWithMicrosoft"
+        app:layout_constraintTop_toTopOf="@id/signInWithMicrosoft"
+        app:cardElevation="2dp">
+
+        <ImageView
+            android:id="@+id/img_signInWithApple"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:src="@drawable/img_apple" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

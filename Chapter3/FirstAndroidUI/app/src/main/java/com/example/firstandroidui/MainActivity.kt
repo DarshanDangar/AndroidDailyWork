@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Switch is On and Off",Toast.LENGTH_SHORT).show()
         }
         btnCheckbox.setOnClickListener {
-            Snackbar.make(View(this), "Added", Snackbar.LENGTH_SHORT).show()
+//            Snackbar.make(View(this), "Added", Snackbar.LENGTH_SHORT).show()
         }
     }
 
