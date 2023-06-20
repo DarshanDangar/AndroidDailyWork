@@ -7,6 +7,10 @@ android {
     namespace 'com.example.firstandroidui'
     compileSdk 33
 
+    buildFeatures {
+        dataBinding true
+    }
+    
     defaultConfig {
         applicationId "com.example.firstandroidui"
         minSdk 24

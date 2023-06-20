@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.firstandroidui.LoginViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
@@ -17,12 +27,14 @@
         android:src="@drawable/img_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/img_support"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,20 +52,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_greeting"
+        android:id="@+id/tv_greeting"
         android:layout_width="259dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="29dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
         android:text="@string/greeting"
         android:textColor="@color/white"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_logo" />
 
     <TextView
-        android:id="@+id/txt_Discription"
+        android:id="@+id/tv_discription"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
         android:layout_marginTop="23dp"
@@ -62,7 +74,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
 
     <View
         android:layout_width="wrap_content"
@@ -85,23 +97,34 @@
         android:text="@string/email"
         android:textColor="@color/black"
         android:textColorHighlight="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/txtE_email"
+        app:layout_constraintBottom_toTopOf="@+id/txtL_email"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtE_email"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="16dp"
-        android:alpha="0.5"
-        android:background="@drawable/cornerradius_strokecolor"
-        android:hint="@string/email_hint"
-        android:paddingStart="13dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtL_email"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+        app:layout_constraintTop_toBottomOf="@id/txt_email"
+        app:layout_constraintStart_toStartOf="@id/txt_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_email" />
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:hintEnabled="false"
+        app:boxStrokeColor="@color/light_gray">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtE_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:hint="Email"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/password"
@@ -113,24 +136,33 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtE_email" />
+        app:layout_constraintTop_toBottomOf="@id/txtL_email" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtL_Password"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintStart_toStartOf="@id/txtL_email"
+        app:passwordToggleEnabled="true"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="@id/txtL_email"
+        android:layout_marginTop="3dp"
+        app:hintEnabled="false"
+        app:boxStrokeColor="@color/light_gray">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txtE_password"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:alpha="0.5"
-        android:background="@drawable/cornerradius_strokecolor"
-        android:drawableRight="@drawable/img_hide"
         android:hint="@string/password_hint"
-        android:paddingStart="13dp"
-        android:paddingEnd="13dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/white"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/forgotPassword"
@@ -141,13 +173,13 @@
         android:text="@string/forgotPassword"
         android:textColor="@color/light_blue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtE_password"
+        app:layout_constraintTop_toBottomOf="@id/txtL_Password"
         app:layout_goneMarginTop="8dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signIn"
         android:layout_width="0dp"
-        android:layout_height="51dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -161,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
 
     <View
-        android:id="@+id/view1"
+        android:id="@+id/leftDashView"
         android:layout_width="0dp"
         android:layout_height="1.5dp"
         android:layout_marginStart="16dp"
@@ -181,12 +213,12 @@
         android:text="@string/signInOtherAccount"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/signInWithGoogle"
-        app:layout_constraintEnd_toStartOf="@id/view2"
-        app:layout_constraintStart_toEndOf="@id/view1"
+        app:layout_constraintEnd_toStartOf="@id/rightDashView"
+        app:layout_constraintStart_toEndOf="@id/leftDashView"
         app:layout_constraintTop_toBottomOf="@id/signIn" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/rightDashView"
         android:layout_width="0dp"
         android:layout_height="1.5dp"
         android:layout_marginEnd="16dp"
@@ -201,12 +233,13 @@
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginTop="11dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/signInWithMicrosoft"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toBottomOf="@id/signInOtherAccount"
         app:cardElevation="2dp">
 
@@ -232,6 +265,7 @@
         app:layout_constraintStart_toEndOf="@+id/signInWithGoogle"
         app:layout_constraintTop_toTopOf="@id/signInWithGoogle"
         tools:ignore="MissingConstraints"
+        android:backgroundTint="@color/white"
         app:cardElevation="2dp">
 
         <ImageView
@@ -254,6 +288,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/signInWithMicrosoft"
         app:layout_constraintTop_toTopOf="@id/signInWithMicrosoft"
+        android:backgroundTint="@color/white"
         app:cardElevation="2dp">
 
         <ImageView
@@ -267,3 +302,4 @@
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
