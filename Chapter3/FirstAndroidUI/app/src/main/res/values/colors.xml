@@ -10,6 +10,9 @@
     <color name="green">#4CAF50</color>
     <color name="blue">#17487F</color>
     <color name="light_blue">#38A6DE</color>
-    <color name="btn_sign_in_BG">#BCE0F2</color>
+    <color name="btn_sign_in_BG">#38A6DE</color>
     <color name="light_gray">#D5D6DC</color>
+    <color name="hint">#80474747</color>
+    <color name="inputbox_border">#80474747</color>
+    <color name="rv_call_bg">#FFF6F9FC</color>
 </resources>
