@@ -15,4 +15,9 @@
     <color name="hint">#80474747</color>
     <color name="inputbox_border">#80474747</color>
     <color name="rv_call_bg">#FFF6F9FC</color>
+    <color name="seperator">#ECEEF5</color>
+    <color name="red">#FF455C</color>
+    <color name="email_text">#8083A3</color>
+    <color name="status_name">#474747</color>
+    <color name="status_description">#8083A3</color>
 </resources>

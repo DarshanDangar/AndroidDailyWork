@@ -14,17 +14,15 @@ class CallActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_call)
-        val iteamDecoration = VerticalSpaceItemDecoration(8)
-        binding.rvCall.addItemDecoration(iteamDecoration)
         binding.rvCall.adapter = CallAdapter(DataCallList.listofCall)
     }
 }
 
-class VerticalSpaceItemDecoration(private val verticalSpaceHeight: Int) : RecyclerView.ItemDecoration() {
-
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        outRect.bottom = verticalSpaceHeight
-    }
-
-}
+//class VerticalSpaceItemDecoration(private val verticalSpaceHeight: Int) : RecyclerView.ItemDecoration() {
+//
+//    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+//        outRect.bottom = verticalSpaceHeight
+//    }
+//
+//}
 
