@@ -22,7 +22,7 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var loginModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+//        setContentView(R.layout.activity_sign_in)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in)
         loginModel = ViewModelProvider(this)[LoginViewModel::class.java]
         binding.viewmodel = loginModel

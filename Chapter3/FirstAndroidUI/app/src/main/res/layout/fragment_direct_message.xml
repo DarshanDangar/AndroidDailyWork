@@ -2,14 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="home.DirectMessageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_chat_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="82dp"
+        android:layout_marginTop="105dp"
+        android:src="@drawable/img_chat"
+        />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/white"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_greeting"
+        app:layout_constraintTop_toBottomOf="@id/img_chat_image"
+        app:layout_constraintStart_toStartOf="@id/img_chat_image"
+        app:layout_constraintEnd_toEndOf="@id/img_chat_image"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/greeting_chat"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_chat_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_greeting"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="41dp"
+        android:text="@string/description_chat"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

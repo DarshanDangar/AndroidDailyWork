@@ -7,6 +7,4 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.firstandroidui.R
 
-class ChannelsFragment : Fragment(R.layout.fragment_channels) {
-
-}
+ class MeetingFragment : Fragment(R.layout.fragment_meeting)

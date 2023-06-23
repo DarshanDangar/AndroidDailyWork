@@ -21,4 +21,12 @@ Sign in to get started</string>
     <string name="logout">Log out</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ic_chat">Chat</string>
+    <string name="ic_meeting">Meeting</string>
+    <string name="ic_call">Call</string>
+    <string name="ic_fax">Fax</string>
+    <string name="ic_profile">Profile</string>
+    <string name="meeting_info">All Upcoming meetings will appear here</string>
+    <string name="greeting_chat">Welcome to OneCloud</string>
+    <string name="description_chat">With unlimited voice and video calls, OneCloud is a great way to stay in touch.</string>
 </resources>

@@ -25,4 +25,36 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/btn_fragment1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Direct message"
+        android:layout_margin="16dp"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fragment2"
+        android:text="Channels"
+        android:layout_margin="16dp"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="home.DirectMessageFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_fragment1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
