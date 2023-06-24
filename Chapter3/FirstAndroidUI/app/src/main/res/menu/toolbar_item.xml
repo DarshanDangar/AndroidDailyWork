@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/heading_first_icon"
+        android:enabled="true"
+        android:icon="@drawable/img_search"
+        android:title="search" />
+    <item
+        android:id="@+id/heading_second_icon"
+        android:enabled="true"
+        android:icon="@drawable/img_voicemail"
+        android:title="voicemail"
+        />
+</menu>

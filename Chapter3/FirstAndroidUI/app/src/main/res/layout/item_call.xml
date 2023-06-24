@@ -7,7 +7,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.firstandroidui.CallListDetails" />
+            type="home.CallListDetails" />
     </data>
 
 <com.google.android.material.card.MaterialCardView

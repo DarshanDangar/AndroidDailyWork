@@ -1,4 +1,4 @@
-package com.example.firstandroidui
+package home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

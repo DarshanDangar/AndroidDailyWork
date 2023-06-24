@@ -6,16 +6,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="home.ChatFragment">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fcv_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tab_chat"
+        app:tabMode="fixed"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorColor="#38A6DE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabSelectedTextColor="#38A6DE"
-        />
-    
+        app:layout_constraintTop_toTopOf="@id/fcv_chat"
+        app:tabSelectedTextColor="#38A6DE">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_direct_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direct Message" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_channels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channels" />
+
+    </com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,15 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/fcv_chat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ImageButton
         android:layout_width="wrap_content"

@@ -23,7 +23,7 @@
 
     <item android:id="@+id/item_profile"
         android:enabled="true"
-        android:icon="@drawable/img_avtar"
+        android:icon="@drawable/img_profile"
         android:title="@string/ic_profile"/>
 
 </menu>

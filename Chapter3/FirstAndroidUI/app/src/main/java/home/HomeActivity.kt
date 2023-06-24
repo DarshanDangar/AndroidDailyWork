@@ -2,6 +2,8 @@ package home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.isGone
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
 import com.example.firstandroidui.R
@@ -27,20 +29,50 @@ class HomeActivity : AppCompatActivity() {
 ////                replace(binding.fragmentContainer.id, ChannelsFragment())
 //            }
 //        }
+
         binding.bottomNavigation.setOnItemSelectedListener {item ->
             when (item.itemId) {
                 R.id.item_meeting -> {
                     supportFragmentManager.commit {
-                        add(binding.fragmentContainerView.id, MeetingFragment())
+                        replace(binding.fragmentContainerView.id, MeetingFragment())
                     }
+                    binding.tbName.text = item.title
+                    binding.tbBtn2.isGone = true
+                    binding.tbBtn.isGone = true
                     true
                 }
                 R.id.item_chat -> {
                     supportFragmentManager.commit {
                         replace(binding.fragmentContainerView.id, ChatFragment())
                     }
+                    binding.tbName.text = item.title
+                    binding.tbBtn.isGone = false
+                    binding.tbBtn2.isGone = true
+                    binding.tbBtn.setImageResource(R.drawable.img_search)
                     true
                 }
+                R.id.item_call -> {
+                    supportFragmentManager.commit {
+                        replace(binding.fragmentContainerView.id, CallFragment())
+                    }
+                    binding.tbName.text = item.title
+                    binding.tbBtn.isGone = false
+                    binding.tbBtn2.isGone = false
+                    binding.tbBtn.setImageResource(R.drawable.img_search)
+                    binding.tbBtn2.setImageResource(R.drawable.img_voicemail)
+                    true
+                }
+                R.id.item_profile -> {
+                    supportFragmentManager.commit {
+                        replace(binding.fragmentContainerView.id, ProfileFragment())
+                    }
+                    binding.tbName.text = item.title
+                    binding.tbBtn.isGone = false
+                    binding.tbBtn2.isGone = true
+                    binding.tbBtn.setImageResource(R.drawable.img_setting)
+                    true
+                }
+
                 else -> false
             }
         }
