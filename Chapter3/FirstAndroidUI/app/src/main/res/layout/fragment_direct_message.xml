@@ -1,11 +1,11 @@
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="btn_text"
+            name="btntext"
             type="String" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -51,14 +51,16 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_create_chat"
         app:cornerRadius="8dp"
-        android:foregroundTint="@color/white"
-        android:src="@drawable/img_message_text"
+        android:drawableLeft="@drawable/img_message_text"
+        android:text="@{btntext}"
         android:backgroundTint="@color/light_blue"
         app:layout_constraintTop_toBottomOf="@id/tv_chat_description"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/tv_chat_description"
         app:layout_constraintEnd_toEndOf="@id/tv_chat_description"
+        tools:text="Start your first chat"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

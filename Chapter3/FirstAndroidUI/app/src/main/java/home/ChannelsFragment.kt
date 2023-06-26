@@ -6,7 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.firstandroidui.R
+import com.example.firstandroidui.databinding.FragmentChannelsBinding
 
-class ChannelsFragment : Fragment(R.layout.fragment_channels) {
+class ChannelsFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val binding = FragmentChannelsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
 }

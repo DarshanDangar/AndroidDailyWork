@@ -29,4 +29,6 @@ Sign in to get started</string>
     <string name="meeting_info">All Upcoming meetings will appear here</string>
     <string name="greeting_chat">Welcome to OneCloud</string>
     <string name="description_chat">With unlimited voice and video calls, OneCloud is a great way to stay in touch.</string>
+    <string name="search">search</string>
+    <string name="voicemail">voicemail</string>
 </resources>

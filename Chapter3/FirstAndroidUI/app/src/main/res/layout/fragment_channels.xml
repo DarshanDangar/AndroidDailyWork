@@ -1,9 +1,23 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="home.ChannelsFragment">
+<layout>
 
-    <include layout="@layout/fragment_direct_message"/>
+    <data>
+        <variable
+            name="text"
+            type="String" />
+    </data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="home.ChannelsFragment">
+
+
+        <include
+            layout="@layout/fragment_direct_message"
+            bind:btntext="@{`Create a Channel`}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

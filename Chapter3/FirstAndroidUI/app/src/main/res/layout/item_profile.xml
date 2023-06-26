@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="status"
+            type="String" />
+
+        <variable
+            name="statusDescription"
+            type="String" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_leading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/img_available"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_status_Name"
+        app:layout_constraintStart_toEndOf="@id/img_leading"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@{status}"
+        android:textColor="@color/status_name"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_status_Description"
+        app:layout_constraintStart_toStartOf="@id/tv_status_Name"
+        app:layout_constraintTop_toBottomOf="@id/tv_status_Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/status_description"
+        android:text="@{statusDescription}"
+        android:textSize="12sp"
+        android:layout_marginTop="0dp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_forward"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/btn_forward"
+        android:background="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
