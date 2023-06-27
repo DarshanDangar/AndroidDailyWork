@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"
-        app:hintEnabled="true"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/email_hint"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
+        app:hintEnabled="true"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -29,32 +26,31 @@
         android:id="@+id/btn_fragment1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Direct message"
         android:layout_margin="16dp"
-        app:layout_constraintWidth_percent="0.45"
+        android:text="Direct message"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
 
     <Button
+        android:id="@+id/btn_fragment2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_fragment2"
-        android:text="Channels"
         android:layout_margin="16dp"
-        app:layout_constraintWidth_percent="0.45"
+        android:text="Channels"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintWidth_percent="0.45" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
+        android:name="com.example.firstandroidui.home.DirectMessageFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:name="home.DirectMessageFragment"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_fragment1"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="16dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_fragment1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

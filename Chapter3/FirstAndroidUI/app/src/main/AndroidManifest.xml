@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +16,7 @@
         android:theme="@style/Theme.FirstAndroidUI"
         tools:targetApi="31">
         <activity
-            android:name="home.HomeActivity"
+            android:name=".home.HomeActivity"
             android:enableOnBackInvokedCallback="true"
             android:exported="true">
             <intent-filter>
@@ -28,9 +32,6 @@
         </activity>
         <activity
             android:name=".RecyclerviewDemo"
-            android:exported="true" />
-        <activity
-            android:name=".CallActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity2"

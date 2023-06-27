@@ -1,13 +1,10 @@
-package home
+package com.example.firstandroidui.home
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class ViewPagerAdapter(fragment: Fragment ) : FragmentStateAdapter(fragment)
-{
+class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+
     private var fragmentList = listOf(DirectMessageFragment(), ChannelsFragment())
 
     override fun getItemCount(): Int {

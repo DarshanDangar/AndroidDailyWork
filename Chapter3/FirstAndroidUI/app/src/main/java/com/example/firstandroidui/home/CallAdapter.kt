@@ -1,15 +1,16 @@
-package home
+package com.example.firstandroidui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstandroidui.databinding.ItemCallBinding
 
-class CallAdapter(private val calls: List<CallListDetails>): RecyclerView.Adapter<CallAdapter.ViewHolder>() {
+class CallAdapter(private val calls: List<CallListDetails>) :
+    RecyclerView.Adapter<CallAdapter.ViewHolder>() {
 
     class ViewHolder(
-        private val binding: ItemCallBinding
-    ): RecyclerView.ViewHolder(binding.root) {
+        private val binding: ItemCallBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: CallListDetails) {
             binding.data = data
         }
