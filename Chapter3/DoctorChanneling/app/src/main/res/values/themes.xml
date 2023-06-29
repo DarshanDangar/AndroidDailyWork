@@ -31,4 +31,20 @@
         <item name="textFillColor">@color/black</item>
     </style>
 
+    <style name="SendMessage" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/averia_sans_libre</item>
+        <item name="textFillColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingHorizontal">22dp</item>
+        <item name="android:paddingVertical">15dp</item>
+    </style>
+
+    <style name="ReceiveMessage" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/averia_sans_libre</item>
+        <item name="textFillColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingHorizontal">22dp</item>
+        <item name="android:paddingVertical">15dp</item>
+    </style>
+
 </resources>

@@ -25,6 +25,11 @@
         android:label="Chat"
         tools:layout="@layout/fragment_profile"/>
 
+    <fragment android:id="@+id/chat"
+        android:name="com.example.doctorchanneling.ChatFragment"
+        android:label="ChatScreen"
+        tools:layout="@layout/fragment_chat"/>
+
 
 
 </navigation>

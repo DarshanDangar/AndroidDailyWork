@@ -33,6 +33,7 @@
             app:iconifiedByDefault="false"
             app:voiceIcon="@color/white"
             android:hint="@string/search_a_doctor"
+            app:queryBackground="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toTopOf="parent" />

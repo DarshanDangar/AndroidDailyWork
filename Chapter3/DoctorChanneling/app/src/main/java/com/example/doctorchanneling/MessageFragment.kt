@@ -6,13 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.commit
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorchanneling.databinding.FragmentMessageBinding
 
-class MessageFragment : Fragment() {
+class MessageFragment : Fragment(), DataProvider {
 
     lateinit var binding: FragmentMessageBinding
+    lateinit var messageAdapter: MessageAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +30,8 @@ class MessageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvMessage.adapter = MessageAdapter(Doctor.listOfDoctor)
+        messageAdapter = MessageAdapter(Doctor.listOfDoctor, this)
+        binding.rvMessage.adapter = messageAdapter
         binding.rvProfile.adapter = ProfileAdapter(Profile.listOfProfile)
         val iteamDecoration = object: RecyclerView.ItemDecoration() {
             override fun getItemOffsets(
@@ -59,6 +65,40 @@ class MessageFragment : Fragment() {
 
         binding.rvMessage.addItemDecoration(iteamDecoration)
         binding.rvProfile.addItemDecoration(profileIteamDecoration)
+
+        binding.searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let { filter(it) }
+                return false
+            }
+
+        })
     }
+
+    private fun filter(text: String) {
+        val filterList :MutableList<Doctor> = mutableListOf()
+
+        for (item in Doctor.listOfDoctor) {
+            if (item.name.lowercase().contains(text.lowercase())) {
+                filterList.add(item)
+            } else {
+                messageAdapter.filterList(null)
+            }
+        }
+        if (filterList.isEmpty()) {
+            Toast.makeText(requireActivity(), "No Data Found..", Toast.LENGTH_SHORT).show()
+        } else {
+            messageAdapter.filterList(filterList)
+        }
+    }
+
+    override fun getData() {
+        findNavController().navigate(R.id.chat)
+    }
+
 
 }
