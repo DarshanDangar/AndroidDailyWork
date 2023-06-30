@@ -2,6 +2,7 @@
 <layout>
 
     <data>
+
         <variable
             name="profile"
             type="com.example.doctorchanneling.Profile" />
@@ -14,9 +15,9 @@
 
         <ImageView
             android:id="@+id/img_active_now"
+            image="@{profile.image}"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            image="@{profile.image}"
             android:contentDescription="@string/app_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,11 +25,10 @@
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@drawable/img_green"
             android:layout_marginTop="5dp"
-            app:layout_constraintTop_toTopOf="@id/img_active_now"
+            android:src="@drawable/img_green"
             app:layout_constraintEnd_toEndOf="@id/img_active_now"
-            />
+            app:layout_constraintTop_toTopOf="@id/img_active_now" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

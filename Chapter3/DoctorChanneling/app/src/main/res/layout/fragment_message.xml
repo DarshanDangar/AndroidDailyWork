@@ -9,34 +9,32 @@
         tools:context=".MessageFragment">
 
         <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/guideline_start"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="16dp"
-            />
+            app:layout_constraintGuide_begin="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/guideline_end"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="16dp"
-            />
+            app:layout_constraintGuide_end="16dp" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:backgroundTint="@color/gray"
             android:background="@drawable/search_bar_bg"
-            app:iconifiedByDefault="false"
-            app:voiceIcon="@color/white"
+            android:backgroundTint="@color/gray"
             android:hint="@string/search_a_doctor"
-            app:queryBackground="@android:color/transparent"
+            app:iconifiedByDefault="false"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@android:color/transparent"
+            app:voiceIcon="@color/white" />
 
         <TextView
             android:id="@+id/tv_active_now"

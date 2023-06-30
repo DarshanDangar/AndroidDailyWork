@@ -7,6 +7,9 @@
         <variable
             name="name"
             type="String" />
+        <variable
+            name="image"
+            type="com.example.doctorchanneling.ProfileImages" />
 
     </data>
 
@@ -20,21 +23,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:background="@drawable/image_bg"
+            android:contentDescription="@string/app_name"
             android:paddingHorizontal="8dp"
             android:paddingVertical="8dp"
-            android:src="@drawable/ic_history"
+            app:image="@{image.images}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/app_name" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/averia_sans_libre"
+            android:text="@{name}"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="@{name}"
             app:layout_constraintBottom_toBottomOf="@id/img_item"
             app:layout_constraintStart_toEndOf="@id/img_item"
             app:layout_constraintTop_toTopOf="@id/img_item" />
@@ -44,11 +47,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:background="@color/white"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/ic_forward"
             app:layout_constraintBottom_toBottomOf="@id/img_item"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/img_item"
-            android:contentDescription="@string/app_name" />
+            app:layout_constraintTop_toTopOf="@id/img_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

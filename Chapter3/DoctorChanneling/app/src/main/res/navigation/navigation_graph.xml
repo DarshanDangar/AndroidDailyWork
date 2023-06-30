@@ -2,34 +2,44 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/home"
-    android:id="@+id/navigation">
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
 
-    <fragment android:id="@+id/home"
+    <fragment
+        android:id="@+id/home"
         android:name="com.example.doctorchanneling.HomeFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
 
-    <fragment android:id="@+id/history"
+    <fragment
+        android:id="@+id/history"
         android:name="com.example.doctorchanneling.HistoryFragment"
         android:label="@string/history"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
 
-    <fragment android:id="@+id/message"
+    <fragment
+        android:id="@+id/message"
         android:name="com.example.doctorchanneling.MessageFragment"
         android:label="@string/message"
-        tools:layout="@layout/fragment_message"/>
+        tools:layout="@layout/fragment_message" >
+        <argument
+            android:name="userName"
+            android:defaultValue="Darshan ka Darshan" />
+        <action
+            android:id="@+id/action_message_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
 
-    <fragment android:id="@+id/profile"
+    <fragment
+        android:id="@+id/profile"
         android:name="com.example.doctorchanneling.ProfileFragment"
         android:label="Chat"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile" />
 
-    <fragment android:id="@+id/chat"
+    <fragment
+        android:id="@+id/chat"
         android:name="com.example.doctorchanneling.ChatFragment"
         android:label="ChatScreen"
-        tools:layout="@layout/fragment_chat"/>
-
-
+        tools:layout="@layout/fragment_chat" />
 
 </navigation>

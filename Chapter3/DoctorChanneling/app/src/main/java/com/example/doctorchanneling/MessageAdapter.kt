@@ -3,8 +3,10 @@ package com.example.doctorchanneling
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.example.doctorchanneling.R.color.light_blue
 import com.example.doctorchanneling.databinding.ItemMessageBinding
 
 class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataProvider?) :
@@ -13,8 +15,11 @@ class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataPro
     class MessageViewHolder(private val binding: ItemMessageBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("ResourceAsColor")
         fun bind(data: Doctor) {
             binding.data = data
+            binding.tvUnreadMsg.isVisible = data.noofMsg != 0
+            if (data.noofMsg != 0) this.binding.tvDegreeDescription.setTextColor(light_blue)
             binding.executePendingBindings()
         }
 
@@ -43,8 +48,10 @@ class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataPro
 
         holder.bind((doctor?.get(position) ?: 0) as Doctor)
         holder.itemView.setOnClickListener {
-            dataProvide?.getData()
+            dataProvide?.getData(bundleOf("userName" to "${doctor?.get(holder.adapterPosition)?.name}"))
+            holder.itemView.id
         }
+
     }
 
     override fun getItemCount(): Int {
