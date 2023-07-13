@@ -27,6 +27,7 @@ class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataPro
 
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filterList(filterList: List<Doctor>?) {
         if (filterList != null) {
             doctor = filterList
@@ -47,13 +48,11 @@ class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataPro
     }
 
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
-
         holder.bind((doctor?.get(position) ?: 0) as Doctor)
         holder.itemView.setOnClickListener {
             dataProvide?.getData(bundleOf("userName" to "${doctor?.get(holder.adapterPosition)?.name}"))
             holder.itemView.id
         }
-
     }
 
     override fun getItemCount(): Int {

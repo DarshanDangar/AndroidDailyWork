@@ -10,11 +10,23 @@ data class Doctor(
     val noofMsg: Int
 ) {
     companion object {
-        val listOfDoctor = arrayListOf<Doctor>(
+        val listOfDoctor = arrayListOf(
             Doctor(R.drawable.avatar_1, "Dr.Upul", "Worem consectetur adipiscing elit.","12.50", 2),
             Doctor(R.drawable.avatar_2, "Dr.Silva", "Worem consectetur adipiscing elit.","12.50", 0),
             Doctor(R.drawable.avatar_3, "Dr.Pawani", "Worem consectetur adipiscing elit.","12.50", 0),
             Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0),
+            Doctor(R.drawable.avatar_4, "Dr.Rayan", "Worem consectetur adipiscing elit.","12.50", 0)
         )
     }
 }
@@ -23,7 +35,7 @@ data class Profile(
     val image: Int,
 ) {
     companion object {
-        val listOfProfile = arrayListOf<Profile>(
+        val listOfProfile = arrayListOf(
             Profile(R.drawable.profile_1),
             Profile(R.drawable.profile_2),
             Profile(R.drawable.profile_3),

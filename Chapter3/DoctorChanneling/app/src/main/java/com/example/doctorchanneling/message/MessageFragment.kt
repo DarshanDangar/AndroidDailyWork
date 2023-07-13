@@ -20,8 +20,8 @@ import com.example.doctorchanneling.profile.ProfileAdapter
 
 class MessageFragment : Fragment(), DataProvider {
 
-    lateinit var binding: FragmentMessageBinding
-    lateinit var messageAdapter: MessageAdapter
+    private lateinit var binding: FragmentMessageBinding
+    private lateinit var messageAdapter: MessageAdapter
 
 
     override fun onCreateView(
@@ -108,7 +108,6 @@ class MessageFragment : Fragment(), DataProvider {
         if (destination?.id == R.id.chat) {
             destination.label = bundleOf.getString("userName")
         }
-//        findNavController().navigate(R.id.chat)
         navController.navigate(R.id.chat)
     }
 
