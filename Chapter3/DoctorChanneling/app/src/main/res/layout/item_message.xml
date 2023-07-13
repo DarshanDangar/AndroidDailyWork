@@ -7,7 +7,7 @@
 
         <variable
             name="data"
-            type="com.example.doctorchanneling.Doctor" />
+            type="com.example.doctorchanneling.profile.Doctor" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

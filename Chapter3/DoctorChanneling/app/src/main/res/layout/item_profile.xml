@@ -9,7 +9,7 @@
             type="String" />
         <variable
             name="image"
-            type="com.example.doctorchanneling.ProfileImages" />
+            type="com.example.doctorchanneling.profile.ProfileImages" />
 
     </data>
 

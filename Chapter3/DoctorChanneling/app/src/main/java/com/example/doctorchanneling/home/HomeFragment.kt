@@ -1,10 +1,11 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.doctorchanneling.R
 
 class HomeFragment : Fragment() {
 

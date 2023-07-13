@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.doctorchanneling.HomeFragment"
+        android:name="com.example.doctorchanneling.home.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/message"
-        android:name="com.example.doctorchanneling.MessageFragment"
+        android:name="com.example.doctorchanneling.message.MessageFragment"
         android:label="@string/message"
         tools:layout="@layout/fragment_message" >
         <argument
@@ -32,13 +32,13 @@
 
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.doctorchanneling.ProfileFragment"
+        android:name="com.example.doctorchanneling.profile.ProfileFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/chat"
-        android:name="com.example.doctorchanneling.ChatFragment"
+        android:name="com.example.doctorchanneling.chat.ChatFragment"
         android:label="ChatScreen"
         tools:layout="@layout/fragment_chat" />
 

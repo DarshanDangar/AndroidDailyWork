@@ -9,6 +9,8 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import com.example.doctorchanneling.databinding.ActivitySignInBinding
+import com.example.doctorchanneling.helper.SharedPreferenceHelper
+import com.example.doctorchanneling.home.HomeActivity
 
 
 class SignInActivity : AppCompatActivity() {

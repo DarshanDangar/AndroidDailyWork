@@ -5,7 +5,7 @@
 
         <variable
             name="profile"
-            type="com.example.doctorchanneling.Profile" />
+            type="com.example.doctorchanneling.profile.Profile" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

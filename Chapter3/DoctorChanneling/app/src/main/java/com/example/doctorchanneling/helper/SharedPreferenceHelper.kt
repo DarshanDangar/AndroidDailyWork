@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.helper
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -1,4 +1,6 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.profile
+
+import com.example.doctorchanneling.R
 
 data class Doctor(
     val image: Int,

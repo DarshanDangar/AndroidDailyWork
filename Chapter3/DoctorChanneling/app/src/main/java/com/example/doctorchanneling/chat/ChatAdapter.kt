@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.chat
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.message
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,7 +7,9 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorchanneling.R.color.light_blue
+import com.example.doctorchanneling.chat.DataProvider
 import com.example.doctorchanneling.databinding.ItemMessageBinding
+import com.example.doctorchanneling.profile.Doctor
 
 class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataProvider?) :
     RecyclerView.Adapter<MessageAdapter.MessageViewHolder>() {

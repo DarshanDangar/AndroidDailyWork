@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.chat
 
 data class ChatModel(val data: String?, val type: MessageType)
 

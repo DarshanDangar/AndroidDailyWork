@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.message
 
 import android.graphics.Rect
 import android.os.Bundle
@@ -11,7 +11,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.doctorchanneling.R
+import com.example.doctorchanneling.chat.DataProvider
 import com.example.doctorchanneling.databinding.FragmentMessageBinding
+import com.example.doctorchanneling.profile.Doctor
+import com.example.doctorchanneling.profile.Profile
+import com.example.doctorchanneling.profile.ProfileAdapter
 
 class MessageFragment : Fragment(), DataProvider {
 

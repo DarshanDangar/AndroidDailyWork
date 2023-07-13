@@ -1,4 +1,6 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.profile
+
+import com.example.doctorchanneling.R
 
 data class ProfileImages(val images: Int) {
     companion object {

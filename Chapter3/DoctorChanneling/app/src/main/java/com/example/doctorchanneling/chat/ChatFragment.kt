@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.chat
 
 import android.annotation.SuppressLint
 import android.graphics.Rect
@@ -12,6 +12,7 @@ import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.doctorchanneling.R
 import com.example.doctorchanneling.databinding.FragmentChatBinding
 
 class ChatFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.doctorchanneling
+package com.example.doctorchanneling.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,7 +15,7 @@ class ProfileAdapter(private val profile: List<Profile>) :
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             ItemActiveProfileBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -25,7 +25,7 @@ class ProfileAdapter(private val profile: List<Profile>) :
         )
     }
 
-    override fun onBindViewHolder(holder: ProfileAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(profile[position])
     }
 
