@@ -1,4 +1,4 @@
-package com.example.firstandroidui.home
+package com.example.firstandroidui.home.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.firstandroidui.R
 import com.example.firstandroidui.databinding.FragmentChatBinding
+import com.example.firstandroidui.home.ActivityMenuProvider
+import com.example.firstandroidui.home.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
 class ChatFragment : Fragment(), ActivityMenuProvider {

@@ -6,24 +6,24 @@
     app:startDestination="@id/item_chat">
 
     <fragment android:id="@+id/item_chat"
-        android:name="com.example.firstandroidui.home.ChatFragment"
+        android:name="com.example.firstandroidui.home.fragment.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat"/>
 
     <fragment android:id="@+id/item_meeting"
-        android:name="com.example.firstandroidui.home.MeetingFragment"
+        android:name="com.example.firstandroidui.home.fragment.MeetingFragment"
         android:label="Meeting"
         tools:layout="@layout/fragment_meeting"
         />
 
     <fragment android:id="@+id/item_call"
-        android:name="com.example.firstandroidui.home.CallFragment"
+        android:name="com.example.firstandroidui.home.fragment.CallFragment"
         android:label="Call"
         tools:layout="@layout/fragment_call"
         />
 
     <fragment android:id="@+id/item_profile"
-        android:name="com.example.firstandroidui.home.ProfileFragment"
+        android:name="com.example.firstandroidui.home.fragment.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile"
         >

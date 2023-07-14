@@ -1,9 +1,10 @@
-package com.example.firstandroidui.home
+package com.example.firstandroidui.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstandroidui.databinding.ItemCallBinding
+import com.example.firstandroidui.home.CallListDetails
 
 class CallAdapter(private val calls: List<CallListDetails>) :
     RecyclerView.Adapter<CallAdapter.ViewHolder>() {

@@ -44,7 +44,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        android:name="com.example.firstandroidui.home.DirectMessageFragment"
+        android:name="com.example.firstandroidui.home.fragment.DirectMessageFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="16dp"
