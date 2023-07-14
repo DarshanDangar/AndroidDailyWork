@@ -109,6 +109,13 @@ class MessageFragment : Fragment(), DataProvider {
             destination.label = bundleOf.getString("userName")
         }
         navController.navigate(R.id.chat)
+
+
+        val action = MessageFragmentDirections.actionMessageToChat()
+        findNavController().apply {
+            graph.findNode(R.id.chat)
+            navigate(action)
+        }
     }
 
 }

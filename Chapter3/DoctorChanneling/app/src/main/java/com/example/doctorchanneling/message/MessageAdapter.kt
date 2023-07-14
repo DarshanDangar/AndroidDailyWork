@@ -13,7 +13,6 @@ import com.example.doctorchanneling.profile.Doctor
 
 class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataProvider?) :
     RecyclerView.Adapter<MessageAdapter.MessageViewHolder>() {
-
     class MessageViewHolder(private val binding: ItemMessageBinding) :
         RecyclerView.ViewHolder(binding.root) {
 

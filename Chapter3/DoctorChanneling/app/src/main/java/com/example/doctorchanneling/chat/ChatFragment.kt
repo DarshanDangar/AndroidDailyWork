@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorchanneling.R
 import com.example.doctorchanneling.databinding.FragmentChatBinding
@@ -19,6 +20,8 @@ class ChatFragment : Fragment() {
 
     private lateinit var binding: FragmentChatBinding
     private val chatAdapter = ChatAdapter()
+    val args: ChatFragmentArgs by navArgs()
+    val userName = args.userName
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
