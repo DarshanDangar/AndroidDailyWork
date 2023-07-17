@@ -111,11 +111,11 @@ class MessageFragment : Fragment(), DataProvider {
         navController.navigate(R.id.chat)
 
 
-        val action = MessageFragmentDirections.actionMessageToChat()
-        findNavController().apply {
-            graph.findNode(R.id.chat)
-            navigate(action)
-        }
+//        val action = MessageFragmentDirections.actionMessageToChat()
+//        findNavController().apply {
+//            graph.findNode(R.id.chat)
+//            navigate(action)
+//        }
     }
 
 }
