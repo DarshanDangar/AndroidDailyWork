@@ -33,10 +33,9 @@ class SignInActivity : AppCompatActivity() {
                 } == true) {
                 SharedPreferenceHelper.putBoolean("signin", true)
                 Toast.makeText(this, "sign in clicked", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+                checkSignIn()
             } else {
-                Toast.makeText(this, "Plese Enter Email and Password", Toast.LENGTH_SHORT)
+                Toast.makeText(this, getString(R.string.plese_enter_email_and_password), Toast.LENGTH_SHORT)
                     .show()
             }
         }

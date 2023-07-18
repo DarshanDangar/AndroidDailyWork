@@ -31,4 +31,5 @@
     <string name="welcome">Welcome</string>
     <string name="call">Call</string>
     <string name="videocall">VideoCall</string>
+    <string name="plese_enter_email_and_password">Plese Enter Email and Password</string>
 </resources>
