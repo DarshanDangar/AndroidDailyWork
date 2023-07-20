@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_message_text"
+        android:title="@string/ic_chat"/>
+
+    <item android:id="@+id/item_meeting"
+        android:enabled="true"
+        android:icon="@drawable/ic_video_filled"
+        android:title="@string/ic_meeting"/>
+
+    <item android:id="@+id/item_call"
+        android:enabled="true"
+        android:icon="@drawable/ic_call"
+        android:title="@string/ic_call"/>
+
+    <item android:id="@+id/item_fax"
+        android:enabled="true"
+        android:icon="@drawable/ic_fax"
+        android:title="@string/ic_fax"/>
+
+    <item android:id="@+id/item_profile"
+        android:enabled="true"
+        android:icon="@drawable/img_user"
+        android:title="@string/ic_profile"/>
+
+</menu>

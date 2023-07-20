@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.firstandroidui.home.CallListDetails" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        layout_height="wrap_content"
+        layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginVertical="@dimen/dp_4"
+        app:strokeWidth="0.1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_16">
+
+            <ImageView
+                android:id="@+id/img_avtar"
+                image="@{data.imagePerson}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_avtarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_12"
+                android:text="@{data.name}"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/img_avtar"
+                app:layout_constraintTop_toTopOf="@id/img_avtar"
+                tools:text="Darshan" />
+
+            <ImageView
+                android:id="@+id/img_call_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_call_duration"
+                app:layout_constraintBottom_toBottomOf="@id/img_avtar"
+                app:layout_constraintStart_toStartOf="@+id/tv_avtarName" />
+
+            <TextView
+                android:id="@+id/tv_call_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_7"
+                android:text="@{data.timeDuration}"
+                android:textColor="@color/status_description"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="@id/img_call_duration"
+                app:layout_constraintStart_toEndOf="@id/img_call_duration"
+                app:layout_constraintTop_toTopOf="@id/img_call_duration" />
+
+            <ImageView
+                android:id="@+id/img_calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_12"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_calendar"
+                app:layout_constraintBottom_toBottomOf="@id/tv_call_duration"
+                app:layout_constraintStart_toEndOf="@id/tv_call_duration"
+                app:layout_constraintTop_toTopOf="@id/tv_call_duration" />
+
+            <TextView
+                android:id="@+id/tv_call_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_7"
+                android:text="@{data.dateAndTime}"
+                android:textColor="@color/status_description"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintBottom_toBottomOf="@+id/img_calender"
+                app:layout_constraintStart_toEndOf="@id/img_calender"
+                app:layout_constraintTop_toTopOf="@id/img_calender" />
+
+            <ImageView
+                android:id="@+id/img_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_details"
+                app:layout_constraintBottom_toBottomOf="@id/btn_call"
+                app:layout_constraintEnd_toEndOf="@id/btn_call"
+                app:layout_constraintEnd_toStartOf="@id/btn_call"
+                app:layout_constraintTop_toTopOf="@id/btn_call" />
+
+            <ImageButton
+                android:id="@+id/btn_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_call"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
