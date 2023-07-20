@@ -50,7 +50,6 @@ class MessageAdapter(private var doctor: List<Doctor>?, val dataProvide: DataPro
         holder.bind((doctor?.get(position) ?: 0) as Doctor)
         holder.itemView.setOnClickListener {
             dataProvide?.getData(bundleOf("userName" to "${doctor?.get(holder.adapterPosition)?.name}"))
-//            doctor?.get(holder.adapterPosition)?.name?.let { it1 -> data(it1) }
         }
     }
 

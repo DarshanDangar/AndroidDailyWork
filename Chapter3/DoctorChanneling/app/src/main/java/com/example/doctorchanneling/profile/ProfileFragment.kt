@@ -43,6 +43,7 @@ class ProfileFragment : Fragment() {
             SharedPreferenceHelper.putBoolean("signin", false)
             val intent = Intent(requireActivity(), SignInActivity::class.java)
             startActivity(intent)
+            requireActivity().finish()
         }
     }
 
