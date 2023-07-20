@@ -10,7 +10,7 @@ class CallAdapter(private val calls: List<CallListDetails>) :
     RecyclerView.Adapter<CallAdapter.ViewHolder>() {
 
     class ViewHolder(
-        private val binding: ItemCallBinding,
+        private val binding: ItemCallBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: CallListDetails) {
             binding.data = data
