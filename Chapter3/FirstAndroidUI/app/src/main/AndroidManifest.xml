@@ -25,12 +25,6 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".RecyclerviewDemo"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="true" />
-        <activity
             android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
