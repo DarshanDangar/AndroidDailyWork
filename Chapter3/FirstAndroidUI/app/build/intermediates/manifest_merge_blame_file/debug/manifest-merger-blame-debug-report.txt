@@ -1,0 +1,172 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.firstandroidui"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:5:5-66
+11-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:6:5-78
+12-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:6:22-76
+13
+14    <permission
+14-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.firstandroidui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.firstandroidui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:8:5-38:19
+21        android:allowBackup="true"
+21-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.10.1] /Users/darshan/.gradle/caches/transforms-3/0f6ecaba8231f15e5dab5756efdca1a1/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:10:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:11:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:12:9-43
+28        android:label="@string/app_name"
+28-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:13:9-41
+29        android:supportsRtl="true"
+29-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.FirstAndroidUI" >
+31-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:15:9-52
+32        <activity
+32-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:17:9-22:20
+33            android:name="com.example.firstandroidui.home.HomeActivity"
+33-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:18:13-46
+34            android:enableOnBackInvokedCallback="true"
+34-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:19:13-55
+35            android:exported="true" >
+35-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:20:13-36
+36        </activity>
+37        <activity
+37-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:23:9-26:20
+38            android:name="profile.ProfileActivity"
+38-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:24:13-51
+39            android:exported="true" >
+39-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:25:13-36
+40        </activity>
+41        <activity
+41-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:27:9-34:20
+42            android:name="com.example.firstandroidui.SignInActivity"
+42-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:28:13-43
+43            android:exported="true" >
+43-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:29:13-36
+44            <intent-filter>
+44-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:30:13-33:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:31:17-69
+45-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:31:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:32:17-77
+47-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:32:27-74
+48            </intent-filter>
+49        </activity>
+50        <activity
+50-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:35:9-37:39
+51            android:name="com.example.firstandroidui.MainActivity"
+51-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:36:13-41
+52            android:exported="true" />
+52-->/Users/darshan/Documents/SimformProject/DemoProject/AndroidDailyWork/Chapter3/FirstAndroidUI/app/src/main/AndroidManifest.xml:37:13-36
+53
+54        <provider
+54-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+55            android:name="androidx.startup.InitializationProvider"
+55-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+56            android:authorities="com.example.firstandroidui.androidx-startup"
+56-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+57            android:exported="false" >
+57-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+58            <meta-data
+58-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+59                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+59-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+60                android:value="androidx.startup" />
+60-->[androidx.emoji2:emoji2:1.2.0] /Users/darshan/.gradle/caches/transforms-3/529362b2c98fe24f73b08d0d843d4417/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+61            <meta-data
+61-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/darshan/.gradle/caches/transforms-3/8bc799d498d19eb496142ba2783547fb/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+62-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/darshan/.gradle/caches/transforms-3/8bc799d498d19eb496142ba2783547fb/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+63                android:value="androidx.startup" />
+63-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/darshan/.gradle/caches/transforms-3/8bc799d498d19eb496142ba2783547fb/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+64            <meta-data
+64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+65                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+66                android:value="androidx.startup" />
+66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+67        </provider>
+68
+69        <uses-library
+69-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+70            android:name="androidx.window.extensions"
+70-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+71            android:required="false" />
+71-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+72        <uses-library
+72-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+73            android:name="androidx.window.sidecar"
+73-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+74            android:required="false" />
+74-->[androidx.window:window:1.0.0] /Users/darshan/.gradle/caches/transforms-3/bd405863864fac5ecbccd73cea0d3ce8/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+75
+76        <receiver
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+77            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+78            android:directBootAware="false"
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+79            android:enabled="true"
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+80            android:exported="true"
+80-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+81            android:permission="android.permission.DUMP" >
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+82            <intent-filter>
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+83                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+84            </intent-filter>
+85            <intent-filter>
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+86                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+86-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+87            </intent-filter>
+88            <intent-filter>
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+89                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+90            </intent-filter>
+91            <intent-filter>
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+92                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/darshan/.gradle/caches/transforms-3/8e18ef26c65c797a6586ae4c2f62e8d0/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+93            </intent-filter>
+94        </receiver>
+95    </application>
+96
+97</manifest>
